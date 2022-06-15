@@ -17,7 +17,6 @@ public class CalculatorService implements ICalculatorService {
                 return number1 / number2;
             default:
                 return 0;
-
         }
 
     }
