@@ -12,7 +12,7 @@
 </head>
 <body>
 <form action="/dictionary" method="post">
-    <input type="text" name="english" placeholder="input Vietnamese" value="${abc}"><br>
+    <input type="text" name="english" placeholder="input Vietnamese" value="${language}"><br>
     <input type="text"  placeholder="input Vietnamese" value="${english}"><br>
     <button type="submit"> Submit</button>
 </form>

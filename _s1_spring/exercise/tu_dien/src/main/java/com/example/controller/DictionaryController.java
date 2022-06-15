@@ -21,7 +21,7 @@ public class DictionaryController {
     @PostMapping("/dictionary")
     public String dictionary(@RequestParam String english, Model model) {
         model.addAttribute("english", iDictionaryService.iDictionaryService(english));
-        model.addAttribute("abc", english);
+            model.addAttribute("language", english);
         return "index";
     }
 }
