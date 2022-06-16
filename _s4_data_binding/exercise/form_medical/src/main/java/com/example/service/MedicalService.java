@@ -2,7 +2,6 @@ package com.example.service;
 
 import com.example.model.MedicalModel;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.List;
 

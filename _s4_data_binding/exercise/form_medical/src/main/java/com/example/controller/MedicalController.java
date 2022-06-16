@@ -10,22 +10,23 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-public class    MedicalController {
+public class MedicalController {
     @Autowired
     private IMedicalService medicalService;
+
     @GetMapping("/formmedical")
-    public String formMedical(Model model){
-String[] travelInformation=new String[]{"Tàu","tàu thuyền","ô tô","khác(ghi rõ)"};
-model.addAttribute("travelInformation",travelInformation);
-String[] birthDay=new String[]{"1990","1991","1992","1993","1994","1995","1996","1997","1998","1999","2000"};
-model.addAttribute("birthDay",birthDay);
-        model.addAttribute("medicalModel",new MedicalModel());
+    public String formMedical(Model model) {
+        String[] travelInformation = new String[]{"Tàu", "tàu thuyền", "ô tô", "khác(ghi rõ)"};
+        model.addAttribute("travelInformation", travelInformation);
+        String[] birthDay = new String[]{"1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000"};
+        model.addAttribute("birthDay", birthDay);
+        model.addAttribute("medicalModel", new MedicalModel());
         return "formmedical";
     }
 
     @PostMapping("/formmedical")
-    public String listMedical(@ModelAttribute("medicalList") MedicalModel medicalModel,Model model){
-        model.addAttribute("medical",medicalService.listMedical(medicalModel));
+    public String listMedical(@ModelAttribute("medicalList") MedicalModel medicalModel, Model model) {
+        model.addAttribute("medical", medicalService.listMedical(medicalModel));
         return "index";
     }
 }

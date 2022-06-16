@@ -13,7 +13,6 @@ public class MedicalModel {
     private String dateStart;
     private String destinationCity;
 
-
     public MedicalModel() {
     }
 

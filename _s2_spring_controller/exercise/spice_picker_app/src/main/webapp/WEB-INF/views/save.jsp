@@ -15,8 +15,8 @@
     <input type="submit" value="save">
 </form>
 <h6>Result:</h6>
-<c:forEach items="${condiment}" var="cnm">
-    <p>${cnm}</p>
+<c:forEach items="${condiment}" var="condiment">
+    <p>${condiment}</p>
 </c:forEach>
 </body>
 </html>
