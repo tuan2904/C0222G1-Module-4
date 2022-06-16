@@ -6,20 +6,6 @@ public class EmailModel {
     private String spamsFilter;
     private String signature;
 
-    public EmailModel(String language,
-                      String pageSize,
-                      String spamsFilter,
-                      String signature) {
-        this.language = language;
-        this.pageSize = pageSize;
-        this.spamsFilter = spamsFilter;
-        this.signature = signature;
-    }
-
-    public EmailModel() {
-
-    }
-
     public String getLanguage() {
         return language;
     }

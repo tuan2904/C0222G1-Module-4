@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class CalculatorController {
     @Autowired
     private ICalculatorService calculatorService;
+
     @GetMapping("/calculator")
     public String calculator() {
         return "calculator";
@@ -19,9 +20,9 @@ public class CalculatorController {
 
     @PostMapping("/calculator")
     public String calculate(@RequestParam Double number1, Double number2, String total, Model model) {
-        model.addAttribute("number1",number1);
-        model.addAttribute("number2",number2);
-        model.addAttribute("result",calculatorService.calculator(number1,number2,total));
+        model.addAttribute("number1", number1);
+        model.addAttribute("number2", number2);
+        model.addAttribute("result", calculatorService.calculator(number1, number2, total));
         return "calculator";
     }
 
