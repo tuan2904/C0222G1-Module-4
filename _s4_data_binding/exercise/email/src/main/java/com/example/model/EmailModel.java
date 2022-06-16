@@ -3,8 +3,12 @@ package com.example.model;
 public class EmailModel {
     private String language;
     private String pageSize;
-    private String spamsFilter;
+    private Boolean spamsFilter;
     private String signature;
+
+    public EmailModel() {
+
+    }
 
     public String getLanguage() {
         return language;
@@ -22,11 +26,11 @@ public class EmailModel {
         this.pageSize = pageSize;
     }
 
-    public String getSpamsFilter() {
+    public Boolean getSpamsFilter() {
         return spamsFilter;
     }
 
-    public void setSpamsFilter(String spamsFilter) {
+    public void setSpamsFilter(Boolean spamsFilter) {
         this.spamsFilter = spamsFilter;
     }
 

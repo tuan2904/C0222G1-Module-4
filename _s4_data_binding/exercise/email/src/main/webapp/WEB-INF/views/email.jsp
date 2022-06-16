@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: ADMIN
-  Date: 6/15/2022
-  Time: 3:31 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -13,28 +6,22 @@
 </head>
 <body>
 <form:form action="/email" method="post" modelAttribute="emailModel">
-    <table>
+<table>
     <h5>Language: <form:select path="language" id="language">
-        <option value="English">English</option>
-        <option value="Vietnamese">Vietnamese</option>
-        <option value="Japanese">Japanese</option>
-        <option value="Chinese">Chinese</option>
+        <form:option value="null">Choose Language</form:option>
+        <form:options items="${language}"></form:options>
     </form:select>
     </h5>
-    <h5>Page:
+    <h5>Page: Show
         <form:select path="pageSize">
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="25">25</option>
-            <option value="50">50</option>
-            <option value="100">100</option>
+            <form:option value="null">Choose Size</form:option>
+            <form:options items="${pageSize}"></form:options>
         </form:select>
     </h5>
-    <h5>Spams Filter: <form:radiobutton  path="spamsFilter"/> Enable spams filter</h5>
-    <h5>Signature: <form:input type="text"  path="signature"/></h5>
-    <button type="submit"> enter</button>
-
-        </form:form>
+    <h5>Spams Filter:
+        <form:checkbox path="spamsFilter"></form:checkbox>Enable spams filter</h5>
+    <h5>Signature: <form:input type="text" path="signature"/></h5>
+    <button type="submit">Enter</button>
+    </form:form>
 </body>
 </html>

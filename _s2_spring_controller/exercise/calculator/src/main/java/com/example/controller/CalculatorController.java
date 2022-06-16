@@ -19,7 +19,7 @@ public class CalculatorController {
     }
 
     @PostMapping("/calculator")
-    public String calculate(@RequestParam Double number1, Double number2, String total, Model model) {
+    public String calculate(@RequestParam Double number1, @RequestParam Double number2, String total, Model model) {
         model.addAttribute("number1", number1);
         model.addAttribute("number2", number2);
         model.addAttribute("result", calculatorService.calculator(number1, number2, total));

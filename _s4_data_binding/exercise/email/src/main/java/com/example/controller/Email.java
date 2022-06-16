@@ -17,6 +17,12 @@ public class Email {
     @GetMapping("/email")
     public String formEmail(Model model) {
         model.addAttribute("emailModel", new EmailModel());
+        String[] language = new String[]{"English", "Vietnamese", "Japanese", "Chinese"};
+        model.addAttribute("language", language);
+        String[] pageSize = new String[]{"5", "10", "15", "25", "50", "100"};
+        String[] spamsFilter = new String[]{"Enable spams filter"};
+        model.addAttribute("spamsFilter", spamsFilter);
+        model.addAttribute("pageSize", pageSize);
         return "email";
     }
 
