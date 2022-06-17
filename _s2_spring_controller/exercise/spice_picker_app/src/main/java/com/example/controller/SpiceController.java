@@ -15,7 +15,7 @@ public class SpiceController {
     }
 
     @PostMapping("/save")
-    public String save2(@RequestParam(name = "condiment", required = false) String[] condiment, Model model) {
+    public String save2(@RequestParam(name = "condiment", required = true) String[] condiment, Model model) {
         model.addAttribute("condiment", condiment);
         return "save";
     }

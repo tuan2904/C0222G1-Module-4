@@ -20,88 +20,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c393ecf-4429-431c-8a9a-59bc5a7a9192" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../_s2_spring_controller/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_s2_spring_controller/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_s2_spring_controller/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_s2_spring_controller/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/.idea/_s3_thymeleaf.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/.idea/product_management.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/java/com/example/configuration/AppConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/java/com/example/configuration/AppInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/java/com/example/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/java/com/example/model/ProductModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/java/com/example/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/java/com/example/service/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/views/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/views/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/views/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/views/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/views/view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/build/classes/java/main/com/example/controller/Spice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/build/libs/spice_picker_app-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/build/libs/spice_picker_app-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/src/main/java/com/example/controller/SpiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s2_spring_controller/exercise/spice_picker_app/src/main/java/com/example/controller/SpiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/views/demo.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../_s3_thymeleaf/practice/spring-customer-management-thymleaf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s3_thymeleaf/practice/spring-customer-management-thymleaf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../practice/thuc_hanh_1/spring_mvc_form_tutorial" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/thuc_hanh_1/spring_mvc_form_tutorial" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.gradle/6.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.gradle/6.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.rtl.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.rtl.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.rtl.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.rtl.min.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.esm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.esm.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.esm.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.esm.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.min.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/views/demo.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +106,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../_s2_spring_controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../_s3_thymeleaf/exercise/product_management" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -255,6 +212,8 @@
       <workItem from="1655380130230" duration="1903000" />
       <workItem from="1655436018634" duration="227000" />
       <workItem from="1655437689649" duration="92000" />
+      <workItem from="1655439571937" duration="4232000" />
+      <workItem from="1655467212093" duration="778000" />
     </task>
     <servers />
   </component>
@@ -286,10 +245,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="526" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1440.860@0.0.1440.860" timestamp="1655349966560" />
-    <state x="501" y="185" key="FileChooserDialogImpl" timestamp="1655437709499">
+    <state x="501" y="185" key="FileChooserDialogImpl" timestamp="1655467224171">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state x="501" y="185" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1655437709499" />
+    <state x="501" y="185" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1655467224171" />
     <state width="958" height="223" key="GridCell.Tab.0.bottom" timestamp="1655436246629">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
