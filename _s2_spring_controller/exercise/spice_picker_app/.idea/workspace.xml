@@ -20,13 +20,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5afbfba1-8c24-4f4c-9084-19d5d8631483" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/views/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/save.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/save.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s4_data_binding/exercise/email/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s4_data_binding/exercise/email/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s4_data_binding/exercise/form_medical/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s4_data_binding/exercise/form_medical/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s4_data_binding/exercise/form_medical/src/main/java/com/example/controller/MedicalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s4_data_binding/exercise/form_medical/src/main/java/com/example/controller/MedicalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s4_data_binding/exercise/form_medical/src/main/java/com/example/model/MedicalModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s4_data_binding/exercise/form_medical/src/main/java/com/example/model/MedicalModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../_s4_data_binding/exercise/form_medical/src/main/java/com/example/service/MedicalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s4_data_binding/exercise/form_medical/src/main/java/com/example/service/MedicalService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../_s4_data_binding/practice/thuc_hanh_1/spring_mvc_form_tutorial" beforeDir="false" afterPath="$PROJECT_DIR$/../../../_s4_data_binding/practice/thuc_hanh_1/spring_mvc_form_tutorial" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -171,7 +219,8 @@
       <workItem from="1655269041676" duration="838000" />
       <workItem from="1655371275198" duration="2264000" />
       <workItem from="1655381873033" duration="194000" />
-      <workItem from="1655382341948" duration="700000" />
+      <workItem from="1655382341948" duration="749000" />
+      <workItem from="1655391149615" duration="507000" />
     </task>
     <servers />
   </component>
@@ -203,54 +252,54 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="501" y="185" key="FileChooserDialogImpl/0.0.1440.860@0.0.1440.860" timestamp="1655382400480" />
-    <state width="958" height="230" key="GridCell.Tab.0.bottom" timestamp="1655373644251">
+    <state width="958" height="230" key="GridCell.Tab.0.bottom" timestamp="1655383380257">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="958" height="230" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655373644251" />
-    <state width="958" height="230" key="GridCell.Tab.0.center" timestamp="1655373644251">
+    <state width="958" height="230" key="GridCell.Tab.0.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655383380257" />
+    <state width="958" height="230" key="GridCell.Tab.0.center" timestamp="1655383380257">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="958" height="230" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1655373644251" />
-    <state width="958" height="230" key="GridCell.Tab.0.left" timestamp="1655373644251">
+    <state width="958" height="230" key="GridCell.Tab.0.center/0.0.1440.860@0.0.1440.860" timestamp="1655383380257" />
+    <state width="958" height="230" key="GridCell.Tab.0.left" timestamp="1655383380257">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="958" height="230" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1655373644251" />
-    <state width="958" height="230" key="GridCell.Tab.0.right" timestamp="1655373644251">
+    <state width="958" height="230" key="GridCell.Tab.0.left/0.0.1440.860@0.0.1440.860" timestamp="1655383380257" />
+    <state width="958" height="230" key="GridCell.Tab.0.right" timestamp="1655383380257">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="958" height="230" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1655373644251" />
-    <state width="958" height="230" key="GridCell.Tab.1.bottom" timestamp="1655373644266">
+    <state width="958" height="230" key="GridCell.Tab.0.right/0.0.1440.860@0.0.1440.860" timestamp="1655383380257" />
+    <state width="958" height="230" key="GridCell.Tab.1.bottom" timestamp="1655383380257">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="958" height="230" key="GridCell.Tab.1.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655373644266" />
-    <state width="958" height="230" key="GridCell.Tab.1.center" timestamp="1655373644251">
+    <state width="958" height="230" key="GridCell.Tab.1.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655383380257" />
+    <state width="958" height="230" key="GridCell.Tab.1.center" timestamp="1655383380257">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="958" height="230" key="GridCell.Tab.1.center/0.0.1440.860@0.0.1440.860" timestamp="1655373644251" />
-    <state width="958" height="230" key="GridCell.Tab.1.left" timestamp="1655373644251">
+    <state width="958" height="230" key="GridCell.Tab.1.center/0.0.1440.860@0.0.1440.860" timestamp="1655383380257" />
+    <state width="958" height="230" key="GridCell.Tab.1.left" timestamp="1655383380257">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="958" height="230" key="GridCell.Tab.1.left/0.0.1440.860@0.0.1440.860" timestamp="1655373644251" />
-    <state width="958" height="230" key="GridCell.Tab.1.right" timestamp="1655373644251">
+    <state width="958" height="230" key="GridCell.Tab.1.left/0.0.1440.860@0.0.1440.860" timestamp="1655383380257" />
+    <state width="958" height="230" key="GridCell.Tab.1.right" timestamp="1655383380257">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="958" height="230" key="GridCell.Tab.1.right/0.0.1440.860@0.0.1440.860" timestamp="1655373644251" />
-    <state width="958" height="230" key="GridCell.Tab.2.bottom" timestamp="1655373644267">
+    <state width="958" height="230" key="GridCell.Tab.1.right/0.0.1440.860@0.0.1440.860" timestamp="1655383380257" />
+    <state width="958" height="230" key="GridCell.Tab.2.bottom" timestamp="1655383380257">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="958" height="230" key="GridCell.Tab.2.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655373644267" />
-    <state width="958" height="230" key="GridCell.Tab.2.center" timestamp="1655373644267">
+    <state width="958" height="230" key="GridCell.Tab.2.bottom/0.0.1440.860@0.0.1440.860" timestamp="1655383380257" />
+    <state width="958" height="230" key="GridCell.Tab.2.center" timestamp="1655383380257">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="958" height="230" key="GridCell.Tab.2.center/0.0.1440.860@0.0.1440.860" timestamp="1655373644267" />
-    <state width="958" height="230" key="GridCell.Tab.2.left" timestamp="1655373644266">
+    <state width="958" height="230" key="GridCell.Tab.2.center/0.0.1440.860@0.0.1440.860" timestamp="1655383380257" />
+    <state width="958" height="230" key="GridCell.Tab.2.left" timestamp="1655383380257">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="958" height="230" key="GridCell.Tab.2.left/0.0.1440.860@0.0.1440.860" timestamp="1655373644266" />
-    <state width="958" height="230" key="GridCell.Tab.2.right" timestamp="1655373644267">
+    <state width="958" height="230" key="GridCell.Tab.2.left/0.0.1440.860@0.0.1440.860" timestamp="1655383380257" />
+    <state width="958" height="230" key="GridCell.Tab.2.right" timestamp="1655383380257">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
-    <state width="958" height="230" key="GridCell.Tab.2.right/0.0.1440.860@0.0.1440.860" timestamp="1655373644267" />
+    <state width="958" height="230" key="GridCell.Tab.2.right/0.0.1440.860@0.0.1440.860" timestamp="1655383380257" />
     <state width="958" height="223" key="GridCell.Tab.3.bottom" timestamp="1655213039995">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -267,5 +316,9 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="958" height="223" key="GridCell.Tab.3.right/0.0.1440.860@0.0.1440.860" timestamp="1655213039995" />
+    <state x="145" y="41" key="new project wizard" timestamp="1655391205809">
+      <screen x="0" y="0" width="1440" height="860" />
+    </state>
+    <state x="145" y="41" key="new project wizard/0.0.1440.860@0.0.1440.860" timestamp="1655391205809" />
   </component>
 </project>
