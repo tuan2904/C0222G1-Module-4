@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f1e5bd93-e3e0-44b0-b538-dd9cd2836c3c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../_s3_thymeleaf/.idea/_s3_thymeleaf.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_s3_thymeleaf/exercise/product_management/.idea/product_management.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/exercise/spice_picker_app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/exercise/spice_picker_app/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s4_data_binding/exercise/email/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../_s4_data_binding/exercise/email/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s4_data_binding/practice/thuc_hanh_1/spring_mvc_form_tutorial" beforeDir="false" afterPath="$PROJECT_DIR$/../_s4_data_binding/practice/thuc_hanh_1/spring_mvc_form_tutorial" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/.gradle/6.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/.gradle/6.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/css/bootstrap.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.esm.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/resources/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/views/demo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_s5_thymeleaf/exercise/product_management/src/main/webapp/index.jsp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2AgicgGj1DmG0kCLAy5i46ruRCP" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f1e5bd93-e3e0-44b0-b538-dd9cd2836c3c" name="Default Changelist" comment="" />
+      <created>1655437709692</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655437709692</updated>
+      <workItem from="1655437711213" duration="26000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class Spice {
+public class SpiceController {
     @GetMapping("/save")
     public String save(@RequestParam(name = "condiment", required = false) String[] condiment, Model model) {
         model.addAttribute("condiment", condiment);
