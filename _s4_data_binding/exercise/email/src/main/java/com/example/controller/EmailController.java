@@ -22,7 +22,7 @@ public class EmailController {
         String[] pageSize = new String[]{"5", "10", "15", "25", "50", "100"};
         String[] spamsFilter = new String[]{"Enable spams filter"};
         model.addAttribute("spamsFilter", spamsFilter);
-        model.addAttribute("pageSize", pageSize);
+        model.addAttribute("pageSizes", pageSize);
         return "email";
     }
 

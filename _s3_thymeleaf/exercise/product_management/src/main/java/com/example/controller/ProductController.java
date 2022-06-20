@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+
 import java.util.List;
 
 
@@ -43,9 +44,9 @@ public class ProductController {
     }
 
     @GetMapping("{id}/delete")
-    public String view(@PathVariable int id, Model model) {
-        model.addAttribute("listProduct", productService.searchId(id));
-        return "/delete";
+    public String view(@PathVariable("id") int id) {
+        productService.remove(id);
+        return "/list";
     }
 
     @GetMapping("{id}/edit")
@@ -54,15 +55,9 @@ public class ProductController {
         return "/edit";
     }
 
-    @PostMapping("/delete")
-    public String deleteProduct(ProductModel productModel) {
-        productService.remove(productModel.getIdProduct());
-        return "redirect:/list";
-    }
-
     @PostMapping("/edit")
     public String editProduct(ProductModel productModel) {
-        productService.update(productModel.getIdProduct(), productModel);
+        productService.update(productModel);
         return "redirect:/list";
     }
 }
