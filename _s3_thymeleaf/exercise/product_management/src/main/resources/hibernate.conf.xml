@@ -13,6 +13,6 @@
 <!--        Tự động update nếu entity có thay đổi.-->
 <!--        Ngoài ra còn có create và none.-->
         <property name="hbm2ddl.auto">update</property>
-        <mapping class="com.example.model.ProductModel"/>
+        <mapping class="com.example.model.Product"/>
     </session-factory>
 </hibernate-configuration>

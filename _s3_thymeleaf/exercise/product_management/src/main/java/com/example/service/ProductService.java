@@ -1,6 +1,6 @@
 package com.example.service;
 
-import com.example.model.ProductModel;
+import com.example.model.Product;
 import com.example.repository.IProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +13,7 @@ public class ProductService implements IProductService {
     private IProductRepository productRepository;
 
     @Override
-    public List<ProductModel> listProduct() {
+    public List<Product> listProduct() {
         return productRepository.listProduct();
     }
 
@@ -23,22 +23,22 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public void update(ProductModel productModel) {
-        productRepository.update(productModel);
+    public void update(Product product) {
+        productRepository.update(product);
     }
 
     @Override
-    public void create(ProductModel productModel) {
-        productRepository.create(productModel);
+    public void create(Product product) {
+        productRepository.create(product);
     }
 
     @Override
-    public List<ProductModel> search(String nameProduct) {
+    public List<Product> search(String nameProduct) {
         return productRepository.search(nameProduct);
     }
 
     @Override
-    public ProductModel searchId(int id) {
+    public Product searchId(int id) {
         return productRepository.searchId(id);
     }
 }

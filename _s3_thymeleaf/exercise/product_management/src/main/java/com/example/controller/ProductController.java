@@ -1,6 +1,6 @@
 package com.example.controller;
 
-import com.example.model.ProductModel;
+import com.example.model.Product;
 import com.example.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,14 +20,14 @@ public class ProductController {
 
     @GetMapping("/list")
     public String listProduct(Model model) {
-        List<ProductModel> productModel = productService.listProduct();
-        model.addAttribute("listProduct", productModel);
+        List<Product> product = productService.listProduct();
+        model.addAttribute("listProduct", product);
         return "/list";
     }
 
     @GetMapping("/create")
     public String createProduct(Model model) {
-        model.addAttribute("listProduct", new ProductModel());
+        model.addAttribute("listProduct", new Product());
         return "/create";
     }
 
@@ -38,8 +38,8 @@ public class ProductController {
     }
 
     @PostMapping("/create")
-    public String save(ProductModel productModel) {
-        productService.create(productModel);
+    public String save(Product product) {
+        productService.create(product);
         return "redirect:/list";
     }
 
@@ -56,8 +56,8 @@ public class ProductController {
     }
 
     @PostMapping("/edit")
-    public String editProduct(ProductModel productModel) {
-        productService.update(productModel);
+    public String editProduct(Product product) {
+        productService.update(product);
         return "redirect:/list";
     }
 }

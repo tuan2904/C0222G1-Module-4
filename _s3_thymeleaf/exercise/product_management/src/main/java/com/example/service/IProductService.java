@@ -1,19 +1,19 @@
 package com.example.service;
 
-import com.example.model.ProductModel;
+import com.example.model.Product;
 
 import java.util.List;
 
 public interface IProductService {
-    List<ProductModel> listProduct();
+    List<Product> listProduct();
 
     void remove(int id);
 
-    void update(ProductModel productModel);
+    void update(Product product);
 
-    void create(ProductModel productModel);
+    void create(Product product);
 
-        List<ProductModel> search(String name);
+        List<Product> search(String name);
 
-        ProductModel searchId(int id);
+        Product searchId(int id);
 }

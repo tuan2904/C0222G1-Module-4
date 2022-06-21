@@ -5,7 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity(name = "product_table")
-public class ProductModel {
+public class Product {
     @Id
     @Column(name = "id_product", columnDefinition = "INT")
     private int idProduct;
@@ -18,7 +18,7 @@ public class ProductModel {
     @Column(name = "producer_product", columnDefinition = "VARCHAR(200)")
     private String producerProduct;
 
-    public ProductModel() {
+    public Product() {
     }
 
     public int getIdProduct() {
