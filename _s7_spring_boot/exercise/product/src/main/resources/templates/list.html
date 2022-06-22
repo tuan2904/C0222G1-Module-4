@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<a href="/create">Create Product</a>
+<table border="1" cellpadding="4">
+    <tr>
+        <td>No:</td>
+        <td>ID:</td>
+        <td>Name Product:</td>
+        <td>Price:</td>
+        <td>Describe Product:</td>
+        <td>Producer Product:</td>
+        <td>Delete</td>
+        <td>Edit</td>
+    </tr>
+    <tr th:each="product,loop : ${listProduct}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${product.idProduct}"></td>
+        <td th:text="${product.nameProduct}"></td>
+        <td th:text="${product.price}"></td>
+        <td th:text="${product.describe}"></td>
+        <td th:text="${product.producer}"></td>
+        <td><a th:href="@{/{id}/delete(id=${product.getIdProduct()})}">delete</a></td>
+        <td><a th:href="@{/{id}/edit(id=${product.getIdProduct()})}">Edit</a></td>
+    </tr>
+</table>
+
+<div>
+    <form action="/search" method="get">
+        <label>
+            <input type="text" name="nameProduct">
+        </label>
+        <button type="submit">Tìm kiếm</button>
+    </form>
+</div>
+</body>
+</html>

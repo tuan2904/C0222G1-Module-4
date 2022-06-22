@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/create">Add new blog</a>
+<table border="1" cellpadding="5">
+    <tr>
+        <td>No:</td>
+        <td>Id Blog:</td>
+        <td>Title Blog:</td>
+        <td>Date Blog:</td>
+        <td>Name Category:</td>
+        <td>Delete</td>
+        <td>Read</td>
+        <td>Edit</td>
+    </tr>
+    <tr th:each="blog,loop : ${listBlog}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${blog.idBlog}"></td>
+        <td th:text="${blog.titleBlog}"></td>
+        <td th:text="${blog.dateBlog}"></td>
+        <td th:text="${blog.category.nameCategory}"></td>
+        <td><a th:href="@{/{id}/delete(id=${blog.idBlog})}">Delete</a></td>
+        <td><a th:href="@{/{id}/read(id=${blog.idBlog})}">Read</a></td>
+        <td><a th:href="@{/{id}/edit(id=${blog.idBlog})}">Edit</a></td>
+    </tr>
+</table>
+<div>
+    <span>
+        <a th:if = "${listBlog.hasPrevious()}" th:href="@{/list(page = ${listBlog.number - 1})}">Previous</a>
+    </span>
+    <span th:text="${listBlog.number + 1}"></span>/
+    <span th:text="${listBlog.totalPages}"></span>
+    <span>
+        <a th:if = "${listBlog.hasNext()}" th:href="@{/list(page = ${listBlog.number +1})}">Next</a>
+    </span>
+</div>
+<form action="/search" method="get" >
+    <input type="text" name="titleBlog">
+    <button type="submit">Search</button>
+</form>
+</body>
+</html>
