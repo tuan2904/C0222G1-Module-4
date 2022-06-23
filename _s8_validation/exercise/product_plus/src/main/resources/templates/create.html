@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:object="${ListCreate}" action="/create" method="post">
+    <div>
+        <label>Id Product: </label>
+        <input type="text" th:field="*{idProduct}"/>
+    </div>
+    <div>
+        <label>Name Product: </label>
+        <input type="text" th:field="*{nameProduct}"/>
+        <p th:if="${#fields.hasErrors('nameProduct')}" th:errors="*{nameProduct}"></p>
+    </div>
+    <div>
+        <label>Price Product: </label>
+        <input type="text" th:field="*{priceProduct}"/>
+        <p th:if="${#fields.hasErrors('priceProduct')}" th:errors="*{priceProduct}"></p>
+    </div>
+    <div>
+        <label>Describe Product:</label>
+        <input type="text" th:field="*{describeProduct}"/>
+        <p th:if="${#fields.hasErrors('describeProduct')}" th:errors="*{describeProduct}"></p>
+    </div>
+    <div>
+        <label>Producer Product:</label>
+        <input type="text" th:field="*{producerProduct}"/>
+        <p th:if="${#fields.hasErrors('producerProduct')}" th:errors="*{producerProduct}"></p>
+    </div>
+    <input type="submit" value="Save"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/create">Add New</a>
+<table border="1" cellpadding="6">
+    <tr>
+        <td>No: </td>
+        <td>Id:</td>
+        <td>First Name: </td>
+        <td>Last Name:</td>
+        <td>Phone:</td>
+        <td>Email:</td>
+    </tr>
+    <tr th:each="list,loop : ${list}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${list.id}"></td>
+        <td th:text="${list.firstName}"></td>
+        <td th:text="${list.lastName}"></td>
+        <td th:text="${list.phone}"></td>
+        <td th:text="${list.email}"></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/create">Create Music</a>
+<h1>List Music</h1>
+<table border="1" cellpadding="5">
+    <tr>
+        <td>No:</td>
+        <td>Id Music:</td>
+        <td>Name Music:</td>
+        <td>Performance Artist:</td>
+        <td>Music Genre:</td>
+        <td>File Path:</td>
+        <td>Delete</td>
+        <td>Edit</td>
+    </tr>
+    <tr th:each="music,loop : ${listMusic}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${music.idMusic}"></td>
+        <td th:text="${music.nameMusic}"></td>
+        <td th:text="${music.performanceArtist}"></td>
+        <td th:text="${music.musicGenre}"></td>
+        <td th:text="${music.filePath}"></td>
+        <td><a th:href="@{/{id}/delete(id=${music.getIdMusic()})}">delete</a></td>
+        <td><a th:href="@{/{id}/edit(id=${music.getIdMusic()})}">Edit</a></td>
+    </tr>
+</table>
+</body>
+</html>
