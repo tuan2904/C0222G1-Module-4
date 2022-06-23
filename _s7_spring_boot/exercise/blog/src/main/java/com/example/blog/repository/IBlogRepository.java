@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+
 import javax.transaction.Transactional;
 import java.util.List;
 
@@ -24,7 +25,7 @@ public interface IBlogRepository extends JpaRepository<BlogModel, Integer> {
     @Modifying
     @Query(value = "insert into blog_table value(:idBlog,:titleBlog,:contentBlog,:dateBlog,:nameCategory)", nativeQuery = true)
     void insertBlog(@Param("idBlog") int idBlog, @Param("titleBlog") String titleBlog, @Param("contentBlog") String contentBlog
-    ,@Param("dateBlog") String dataBlog, @Param("nameCategory") String nameCategory);
+            , @Param("dateBlog") String dataBlog, @Param("nameCategory") String nameCategory);
 
     @Modifying
     @Query(value = "delete from blog_table where id_blog=:id_blog", nativeQuery = true)
@@ -33,11 +34,11 @@ public interface IBlogRepository extends JpaRepository<BlogModel, Integer> {
     @Query(value = "select content_blog from blog_table where id_blog=:id_blog", nativeQuery = true)
     List<BlogModel> findAllByContentBlog(@Param("id_blog") int idBlog);
 
-
     @Modifying
     @Query(value = "update blog_table set title_blog=:title_blog,content_blog=:content_blog,date_blog=:date_blog where id_blog=:id_blog", nativeQuery = true)
-    void editBlog(@Param("id_blog") int idBlog, @Param("title_blog") String titleBlog, @Param("content_blog") String contentBlog
-    ,@Param("date_blog") String date_blog);
+    void editBlog(@Param("title_blog") String titleBlog, @Param("content_blog") String contentBlog,
+                  @Param("date_blog") String dateBlog, @Param("id_blog") int idBlog);
 
     @Query(value = "select * from blog_table where title_blog like :title_blog", nativeQuery = true)
-    Page<BlogModel> searchBlog(@Param("title_blog") String title, Pageable pageable);}
+    Page<BlogModel> searchBlog(@Param("title_blog") String title, Pageable pageable);
+}

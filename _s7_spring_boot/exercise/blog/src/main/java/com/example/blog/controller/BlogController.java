@@ -58,7 +58,7 @@ public class BlogController {
     }
 
     @GetMapping("/{id}/edit")
-    public String formEdit(@PathVariable int id, Model model) {
+    public String formEdit(@PathVariable("id") int id, Model model) {
         model.addAttribute("formEdit", blogService.findById(id));
         return "/edit";
     }
@@ -69,7 +69,7 @@ public class BlogController {
         return "redirect:/list";
     }
 
-    @GetMapping("/{id}/read")
+    @GetMapping("/{id}/view")
     public String read(@PathVariable int id, Model model) {
         model.addAttribute("blog", blogService.findById(id));
         return "view";
@@ -80,4 +80,5 @@ public class BlogController {
         model.addAttribute("list", blogService.search(blogModel, PageRequest.of(page, 1)));
         return "/list";
     }
+
 }

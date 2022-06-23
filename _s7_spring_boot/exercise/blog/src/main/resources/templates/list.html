@@ -30,7 +30,7 @@
 </table>
 <div>
     <span>
-        <a th:if = "${listBlog.hasPrevious()}" th:href="@{/list(page = ${listBlog.number - 1})}">Previous</a>
+            <a th:if = "${listBlog.hasPrevious()}" th:href="@{/list(page = ${listBlog.number - 1})}">Previous</a>
     </span>
     <span th:text="${listBlog.number + 1}"></span>/
     <span th:text="${listBlog.totalPages}"></span>

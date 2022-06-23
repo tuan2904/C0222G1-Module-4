@@ -1,30 +1,22 @@
-package com.example.product.Model;
+package com.example.product.model;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
-@Entity(name = "product")
+@Entity(name = "products")
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_product")
+    @Column(name = "id_product", columnDefinition = "INT")
     private int idProduct;
-    @Column(name = "name_product")
+    @Column(name = "name_product", columnDefinition = "VARCHAR(200)")
     private String nameProduct;
-    private int price;
-    private String description;
-    private String producer;
-    @Column(name = "status_delete")
-    private int statusDelete;
-
-    public String getProducer() {
-        return producer;
-    }
-
-    public void setProducer(String producer) {
-        this.producer = producer;
-    }
-
-
+    @Column(name = "price_product", columnDefinition = "DOUBLE")
+    private double priceProduct;
+    @Column(name = "describe_product", columnDefinition = "VARCHAR(200)")
+    private String describeProduct;
+    @Column(name = "producer_product", columnDefinition = "VARCHAR(200)")
+    private String producerProduct;
 
     public Product() {
     }
@@ -45,27 +37,27 @@ public class Product {
         this.nameProduct = nameProduct;
     }
 
-    public int getPrice() {
-        return price;
+    public double getPriceProduct() {
+        return priceProduct;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setPriceProduct(double priceProduct) {
+        this.priceProduct = priceProduct;
     }
 
-    public String getDescription() {
-        return description;
+    public String getDescribeProduct() {
+        return describeProduct;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDescribeProduct(String describeProduct) {
+        this.describeProduct = describeProduct;
     }
 
-    public int getStatusDelete() {
-        return statusDelete;
+    public String getProducerProduct() {
+        return producerProduct;
     }
 
-    public void setStatusDelete(int statusDelete) {
-        this.statusDelete = statusDelete;
+    public void setProducerProduct(String producerProduct) {
+        this.producerProduct = producerProduct;
     }
 }

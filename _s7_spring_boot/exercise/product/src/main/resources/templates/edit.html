@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<form th:object="${listProduct}" action="/create" method="post">
+<form th:object="${listProductEdit}" action="/edit" method="post">
     <div>
         <label>Id Product: </label>
         <input type="text" th:field="*{idProduct}"/>
@@ -16,15 +16,15 @@
     </div>
     <div>
         <label>Price Product: </label>
-        <input type="text" th:field="*{price}"/>
+        <input type="text" th:field="*{priceProduct}"/>
     </div>
     <div>
         <label>Describe Product:</label>
-        <input type="text" th:field="*{description}"/>
+        <input type="text" th:field="*{describeProduct}"/>
     </div>
     <div>
         <label>Producer Product:</label>
-        <input type="text" th:field="*{producer}"/>
+        <input type="text" th:field="*{producerProduct}"/>
     </div>
     <input type="submit" value="Save"/>
 </form>

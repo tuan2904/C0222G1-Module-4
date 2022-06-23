@@ -1,43 +1,47 @@
-package com.example.product.Service;
+package com.example.product.service;
 
-import com.example.product.Model.Product;
-import com.example.product.Repository.IProductRepository;
+import com.example.product.model.Product;
+import com.example.product.repository.IProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
-public class ProductService implements IProductService{
+public class ProductService implements IProductService {
     @Autowired
     private IProductRepository productRepository;
-    @Override
-    public Page<Product> findAllProduct(Pageable pageable) {
-        return productRepository.findAllProduct(pageable);
-    }
-    @Override
-    public Page<Product> findAllProductByName(Pageable pageable, Product product) {
-        return productRepository.findAllProductByName(pageable, product.getNameProduct());    }
 
     @Override
-    public void remove(Product product) {
-        productRepository.delete(product.getIdProduct());
-
+    public Page<Product> listProduct(Pageable pageable) {
+        return productRepository.lisProduct(pageable);
     }
+
     @Override
-    public Product findById(int id) {
-        return productRepository.findByIdProduct(id);
+    public void remove(int id) {
+        productRepository.deleteBlog(id);
     }
 
     @Override
     public void update(Product product) {
-        productRepository.update(product.getNameProduct(), product.getPrice(), product.getDescription(), product.getProducer(), product.getIdProduct());
-
+        productRepository.editProduct(product.getIdProduct(), product.getNameProduct(), product.getPriceProduct(),
+                product.getDescribeProduct(), product.getProducerProduct());
     }
 
     @Override
-    public void save(Product product) {
-        productRepository.save(product.getNameProduct(), product.getPrice(), product.getDescription(), product.getProducer());
+    public void create(Product product) {
+        productRepository.save(product);
     }
 
+    @Override
+    public Page<Product> search(String name,Pageable pageable) {
+        return productRepository.searchBlog(name,pageable);
+    }
+
+    @Override
+    public Product searchId(int id) {
+        return productRepository.findAllByIdProduct(id);
+    }
 }

@@ -40,8 +40,8 @@ public class BlogService implements IBlogService {
 
     @Override
     public void update(BlogModel blogModel) {
-        blogRepository.editBlog(blogModel.getIdBlog(), blogModel.getTitleBlog(), blogModel.getContentBlog()
-        ,blogModel.getDateBlog());
+        blogRepository.editBlog( blogModel.getTitleBlog(), blogModel.getContentBlog()
+        ,blogModel.getDateBlog(),blogModel.getIdBlog());
     }
 
     @Override

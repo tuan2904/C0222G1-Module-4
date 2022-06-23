@@ -1,18 +1,17 @@
 package com.example.product.controller;
 
-import com.example.product.Model.Product;
-import com.example.product.Service.IProductService;
+import com.example.product.model.Product;
+import com.example.product.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 
 @Controller
 public class ProductController {
@@ -21,58 +20,51 @@ public class ProductController {
     private IProductService productService;
 
     @GetMapping("/list")
-    public String home(@RequestParam(name = "page", defaultValue = "0") int page, Model model) {
-        Sort sort = Sort.by("name_product").ascending();
-        Page<Product> productList = productService.findAllProduct(PageRequest.of(page, 2, sort));
-        model.addAttribute("listProduct", productList);
-        model.addAttribute("product", new Product());
+    public String listProduct(Model model, @RequestParam(value = "page", defaultValue = "0") int page) {
+        Page<Product> product = productService.listProduct(PageRequest.of(page, 2));
+        model.addAttribute("listProduct", product);
         return "/list";
     }
 
     @GetMapping("/create")
-    public String create(Model model) {
+    public String createProduct(Model model) {
         model.addAttribute("listProduct", new Product());
         return "/create";
     }
 
-    @PostMapping("/save")
+    @PostMapping("/create")
     public String save(Product product) {
-        productService.save(product);
-        return "redirect:/product";
+        productService.create(product);
+        return "redirect:/list";
     }
 
-    @GetMapping("/{id}/edit")
-    public String edit(@PathVariable int id, Model model) {
-        model.addAttribute("listProduct", productService.findById(id));
+    @GetMapping("{id}/delete")
+    public String view(@PathVariable("id") int id) {
+        productService.remove(id);
+        return "redirect:/list";
+    }
+
+    @GetMapping("{id}/edit")
+    public String formEdit(@PathVariable int id, Model model) {
+        model.addAttribute("listProductEdit", productService.searchId(id));
         return "/edit";
     }
 
-    @PostMapping("/update")
-    public String update(Product product) {
+    @PostMapping("/edit")
+    public String editProduct(Product product) {
         productService.update(product);
-        return "redirect:/product";
+        return "redirect:/list";
     }
 
-    @GetMapping("/{id}/delete")
-    public String delete(@PathVariable int id, Model model) {
-        model.addAttribute("product", productService.findById(id));
-        return "/delete";
+    @GetMapping("/{id}/view")
+    public String view(@PathVariable int id, Model model) {
+        model.addAttribute("list", productService.searchId(id));
+        return "/view";
     }
-
-    @PostMapping("/delete")
-    public String delete(Product product, RedirectAttributes redirect) {
-        productService.remove(product);
-        redirect.addFlashAttribute("success", "Removed product successfully!");
-        return "redirect:/product";
-    }
-
 
     @GetMapping("/search")
-    public String searchByName(@RequestParam(name = "page", defaultValue = "0") int page, Product product, Model model) {
-        Sort sort = Sort.by("name_product").ascending();
-        Page<Product> productList = productService.findAllProductByName(PageRequest.of(page, 2, sort), product);
-        model.addAttribute("listProduct", productList);
-        model.addAttribute("product", new Product());
+    public String search(String nameProduct, Model model, @RequestParam(name = "page", defaultValue = "0") int page) {
+        model.addAttribute("listProduct", productService.search(nameProduct, PageRequest.of(page, 1)));
         return "/list";
     }
 }

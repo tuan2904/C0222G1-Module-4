@@ -38,13 +38,11 @@ public class ProductRepository implements IProductRepository {
         entityTransaction.begin();
         BaseRepository.entityManager.persist(product);
         entityTransaction.commit();
-
     }
 
     @Override
     public List<Product> search(String name) {
         List<Product> resultList = BaseRepository.entityManager.createQuery("select p from product_table p where p.nameProduct like ?1", Product.class).setParameter(1, name).getResultList();
-
         return resultList;
     }
 

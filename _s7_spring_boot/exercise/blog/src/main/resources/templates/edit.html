@@ -8,8 +8,7 @@
 <form action="/edit" th:object="${formEdit}" method="post">
     <div>
         <label>Id Blog: </label>
-        <p th:field="*{idBlog}"></p>
-    </div>
+        <input type="text" th:field="*{idBlog}"/>    </div>
     <div>
         <label>Title Blog: </label>
         <input type="text" th:field="*{titleBlog}"/>

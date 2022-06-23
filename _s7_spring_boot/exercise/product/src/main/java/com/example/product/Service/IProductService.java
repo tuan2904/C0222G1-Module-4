@@ -1,22 +1,21 @@
-package com.example.product.Service;
+package com.example.product.service;
 
-import com.example.product.Model.Product;
+import com.example.product.model.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
 
-@Service
+import java.util.List;
+
 public interface IProductService {
-    Page<Product> findAllProduct(Pageable pageable);
+    Page<Product> listProduct(Pageable pageable);
 
-    void save(Product product);
-
-    Product findById(int id);
+    void remove(int id);
 
     void update(Product product);
 
-    void remove(Product product);
+    void create(Product product);
 
-    Page<Product> findAllProductByName(Pageable pageable, Product product);
+    Page<Product> search(String name,Pageable pageable);
 
+    Product searchId(int id);
 }
