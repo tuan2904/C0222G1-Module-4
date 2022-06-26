@@ -24,7 +24,7 @@ public class BlogController {
     private ICategoryService categoryService;
 
     @GetMapping("/list")
-    public String listBlog(Model model, @RequestParam(value = "page", defaultValue = "0") int page) {
+        public String listBlog(Model model, @RequestParam(value = "page", defaultValue = "0") int page) {
         Sort sort = Sort.by("date_blog").ascending();
         Page<BlogModel> blogModels = blogService.listBlog(PageRequest.of(page, 2, sort));
         model.addAttribute("listBlog", blogModels);

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="row" >
+    <div class="col-md-4"><a href="/service/create">Add New Service</a>
+    </div>
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+            <form action="/service/search" method="get">
+                <div class="input-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control form-control-lg" placeholder="Search Here" name="serviceName">
+                        <button type="submit" class="input-group-text btn-success"><i class="fas fa-search"></i> Search</button>
+                    </div>
+                </div>
+            </form>
+    </div>
+</div>
+<table class="table table-hover">
+    <tr>
+        <td>No:</td>
+        <th>ID Service</th>
+        <th>Name Service</th>
+        <th>Area Service</th>
+        <th>Cost Service</th>
+        <th>Max People Service</th>
+        <th>Service Type</th>
+        <th>Rent Type</th>
+        <th>Room Service</th>
+        <th>Description Service</th>
+        <th>Pool Area Service</th>
+        <th>Number Floors Service</th>
+        <th>delete</th>
+        <th>Edit</th>
+    </tr>
+    <tr th:each="service,loop : ${listService}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${service.serviceId}"></td>
+        <td th:text="${service.serviceName}"></td>
+        <td th:text="${service.serviceArea}"></td>
+        <td th:text="${service.serviceCost}"></td>
+        <td th:text="${service.serviceMaxPeople}"></td>
+        <td th:text="${service.rentType.idRentType}"></td>
+        <td th:text="${service.serviceType.idServiceType}"></td>
+        <td th:text="${service.serviceRoom}"></td>
+        <td th:text="${service.serviceDescription}"></td>
+        <td th:text="${service.servicePoolArea}"></td>
+        <td th:text="${service.serviceNumberFloors}"></td>
+        <td><a th:href="@{/{id}/service/edit(id=${service.serviceId})}">Edit</a></td>
+        <td>
+            <div class="modal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p th:text="${service.serviceName}"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary"
+                                    th:href="@{/{id}/service/delete(id=${service.serviceId})}">Delete
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+<div>
+    <span>
+            <a th:if="${listService.hasPrevious()}" th:href="@{/service/list(page = ${listService.number - 1})}">Previous</a>
+    </span>
+    <span th:text="${listService.number + 1}"></span>/
+    <span th:text="${listService.totalPages}"></span>
+    <span>
+        <a th:if="${listService.hasNext()}" th:href="@{/service/list(page = ${listService.number +1})}">Next</a>
+    </span>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</html>
+</html>

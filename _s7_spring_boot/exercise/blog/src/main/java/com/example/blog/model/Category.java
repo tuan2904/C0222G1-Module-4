@@ -6,7 +6,7 @@ import java.util.Set;
 @Entity(name = "category")
 public class Category {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCategory;
     @Column(name = "name_category",columnDefinition = "VARCHAR(200)")
     private String nameCategory;

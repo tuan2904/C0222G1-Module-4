@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<form action="/service/edit" method="post" th:object="${formEdit}">
+    <div class="form-floating mb-3 mt-3">
+        <input class="form-control" type="text" th:field="*{serviceId}" id="id" placeholder="Enter id">
+        <label class="form-label">Id Service: </label>
+    </div>
+    <div class="form-floating mb-3 mt-3">
+        <input class="form-control" type="text" th:field="*{serviceName}" id="name" placeholder="Enter Name">
+        <label class="form-label">Name Service: </label>
+    </div>
+
+    <div class="form-floating mb-3 mt-3">
+        <input class="form-control" type="text" th:field="*{serviceArea}" id="area" placeholder="Area">
+        <label class="form-label">Area Service: </label>
+    </div>
+
+    <div class="form-floating mb-3 mt-3">
+        <input class="form-control" type="text" th:field="*{serviceCost}" id="cost" placeholder="Cost">
+        <label class="form-label">Cost Service: </label>
+    </div>
+    <div class="form-floating mb-3 mt-3">
+        <select class="form-select" th:field="*{serviceType.idServiceType}">
+            <option th:each="serviceType : ${listServiceType}" th:value="${serviceType.idServiceType}"
+                    th:text="${serviceType.name}">
+            </option>
+        </select>
+        <label class="form-label">Service Type</label>
+    </div>
+    <div class="form-floating mb-3 mt-3">
+        <select class="form-select" th:field="*{rentType.idRentType}">
+            <option th:each="rentType : ${listRentType}" th:value="${rentType.idRentType}"
+                    th:text="${rentType.name}">
+            </option>
+        </select>
+        <label class="form-label">Rent Type</label>
+    </div>
+
+
+
+    <div class="form-floating mb-3 mt-3">
+        <input class="form-control" type="text" th:field="*{serviceMaxPeople}" id="maxPeople" placeholder="maxPeople">
+        <label class="form-label">Max People Service: </label>
+    </div>
+
+    <div class="form-floating mb-3 mt-3">
+        <input class="form-control" type="text" th:field="*{serviceRoom}" id="room" placeholder="Room">
+        <label class="form-label">Room Service: </label>
+    </div>
+
+    <div class="form-floating mb-3 mt-3">
+        <input type="text" th:field="*{serviceDescription}" class="form-control" id="description" placeholder="Description">
+        <label class="form-label">Description Service: </label>
+    </div>
+
+    <div class="form-floating mb-3 mt-3">
+        <input type="text" th:field="*{servicePoolArea}" class="form-control" id="poolArea" placeholder="poolArea">
+        <label class="form-label">Pool Area Service: </label>
+    </div>
+
+    <div class="form-floating mb-3 mt-3">
+        <input type="text" th:field="*{serviceNumberFloors}" class="form-control" id="numberFloors" placeholder="numberFloors">
+        <label class="form-label">Number Floors Service: </label>
+    </div>
+
+    <div class="form-floating mb-3 mt-3">
+        <button type="submit" class="btn btn-primary">Update</button>
+    </div>
+</form>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</html>
