@@ -8,4 +8,6 @@ public interface IBookService {
     List<Book> listBook();
     void returnBook(int number,int id);
     Book findId(int id);
+    public void save(Book book);
+
 }

@@ -31,6 +31,13 @@ public class BorrowBooks {
         this.id = id;
     }
 
+    public Set<Book> getBook() {
+        return book;
+    }
+
+    public void setBook(Set<Book> book) {
+        this.book = book;
+    }
 
     public Set<Book> getBooks() {
         return book;

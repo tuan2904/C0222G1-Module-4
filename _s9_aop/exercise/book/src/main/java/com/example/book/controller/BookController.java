@@ -10,6 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.List;
+
 @Controller
 public class BookController {
     @Autowired
@@ -47,11 +49,15 @@ public class BookController {
 
     @PostMapping("/return")
     public String returnBook(Book book, @RequestParam("codeBorrowBooks") int codeBorrowBooks, @RequestParam("id") int id) {
-        BorrowBooks borrowBook = borrowBooksService.listCode(id);
-        if (borrowBook.equals(codeBorrowBooks)) {
-            bookService.returnBook(book.getNumberOfBooks(), book.getIdBook());
-            borrowBooksService.remove(borrowBook);
-
+        List<BorrowBooks> list = borrowBooksService.list();
+        for (BorrowBooks items : list) {
+            if (items.getCodeBorrowBooks() == codeBorrowBooks) {
+                borrowBooksService.remove(items);
+                borrowBooksService.listCode(book.getBorrowBooks().getCodeBorrowBooks());
+                bookService.returnBook(book.getNumberOfBooks(), book.getIdBook());
+                bookService.save(book);
+                return "redirect:/list";
+            }
         }
         return "redirect:/list";
     }
