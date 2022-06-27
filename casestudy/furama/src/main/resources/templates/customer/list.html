@@ -8,21 +8,17 @@
     <title>Title</title>
 </head>
 <body>
-<div class="row" >
+<div class="row">
     <div class="col-md-4"><a href="/customer/create">Add New Customer</a>
     </div>
     <div class="col-md-4"></div>
     <div class="col-md-4">
-            <form action="/customer/search" method="get">
-                <div class="input-group">
-                    <input type="text" class="form-control form-control-lg" placeholder="Search Here" name="nameCustomer">
-                    <button type="submit" class="input-group-text btn-success"><i class="fas fa-search"></i> Search</button>
-                </div>
-            </form>
-<!--        <form action="/customer/search" method="get" >-->
-<!--            <input type="text" name="nameCustomer">-->
-<!--            <button type="submit">Search</button>-->
-<!--        </form>-->
+        <form action="/customer/search" method="get">
+            <div class="input-group">
+                <input type="text" class="form-control form-control-lg" placeholder="Search Here" name="nameCustomer">
+                <button type="submit" class="input-group-text btn-success"><i class="fas fa-search"></i> Search</button>
+            </div>
+        </form>
     </div>
 </div>
 <table class="table table-hover">
@@ -53,22 +49,31 @@
         <td th:text="${customer.customerType.idCustomerType}"></td>
         <td><a th:href="@{/{id}/customer/edit(id=${customer.idCustomer})}">Edit</a></td>
         <td>
-            <div class="modal" tabindex="-1">
+            <div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                    Delete
+                </button>
+            </div>
+
+            <div class="modal" id="myModal">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h4 class="modal-title">Delete Customer</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
+
                         <div class="modal-body">
-                            <p th:text="${customer.nameCustomer}"></p>
+                            <span>Do you want delete:</span>
+                            <p th:text="${customer.nameC1ustomer}"></p>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary"
-                                    th:href="@{/{id}/customer/delete(id=${customer.idCustomer})}">Delete
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                            <button th:href="@{/{id}/customer/delete(id=${customer.idCustomer})}" type="submit"
+                                    class="btn btn-danger" data-bs-dismiss="modal">Delete
                             </button>
                         </div>
+
                     </div>
                 </div>
             </div>

@@ -37,7 +37,7 @@ public class EmployeeController {
     @GetMapping("/employee/create")
     public String formCreate(Model model) {
         model.addAttribute("listEmployee", new Employee());
-        model.addAttribute("listUser",userService.listUser() );
+        model.addAttribute("listUser",userService.listUser());
         model.addAttribute("listDivision",divisionService.listDivision());
         model.addAttribute("listEducation", educationDegreeService.listEducation());
         model.addAttribute("listPosition", positionService.listPosition());

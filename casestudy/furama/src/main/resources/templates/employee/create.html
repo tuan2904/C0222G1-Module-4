@@ -78,10 +78,13 @@
         </select>
         <label class="form-label">Division Employee</label>
     </div>
-
     <div class="form-floating mb-3 mt-3">
-        <input class="form-control" type="text" th:field="*{user}" id="username" placeholder="idCar">
-        <label class="form-label">User Employee: </label>
+        <select class="form-select" th:field="*{user.username}">
+            <option th:each="user : ${listUser}" th:value="${user.username}"
+                    th:text="${user.username}">
+            </option>
+        </select>
+        <label class="form-label">Division Employee</label>
     </div>
 
     <div class="form-floating mb-3 mt-3">

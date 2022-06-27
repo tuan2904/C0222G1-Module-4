@@ -45,7 +45,7 @@ employeeRepository.save(employee);
 
     @Override
     public void create(Employee employee) {
-
+employeeRepository.save(employee);
     }
 
     @Override

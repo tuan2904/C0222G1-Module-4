@@ -13,6 +13,7 @@
         <input class="form-control" type="text" th:field="*{idCustomer}" id="id" placeholder="Enter Id">
         <label class="form-label">Id Customer: </label>
     </div>
+
     <div class="form-floating mb-3 mt-3">
         <select class="form-select" th:field="*{customerType.idCustomerType}">
             <option th:each="customerType : ${listCustomerType}" th:value="${customerType.idCustomerType}"
@@ -21,10 +22,12 @@
         </select>
         <label class="form-label">Type Customer</label>
     </div>
+
     <div class="form-floating mb-3 mt-3">
         <input class="form-control" type="text" th:field="*{nameCustomer}" id="name" placeholder="Enter Name">
         <label class="form-label">Name Customer: </label>
     </div>
+
     <div class="form-floating mb-3 mt-3">
         <input class="form-control" type="text" th:field="*{birthDayCustomer}" id="birthDay" placeholder="BirthDay">
         <label class="form-label">Birth Day Customer: </label>
@@ -49,10 +52,12 @@
         <input type="text" th:field="*{email}" class="form-control" id="email" placeholder="Email">
         <label class="form-label">Email Customer: </label>
     </div>
+
     <div class="form-floating mb-3 mt-3">
         <input type="text" th:field="*{address}" class="form-control" id="address" placeholder="address">
         <label class="form-label">Address Customer: </label>
     </div>
+
     <div class="form-floating mb-3 mt-3">
         <button type="submit" class="btn btn-primary">Create</button>
     </div>
