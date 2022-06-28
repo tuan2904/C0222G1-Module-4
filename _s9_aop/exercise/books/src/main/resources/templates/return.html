@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/return" method="post" th:object="${form}">
+    <div th:text="${message}"></div>
+    <div>
+        <p>Trả sách</p>
+        <p th:feild="*{idBook}"></p>
+        <input type="text" name="codeBorrowBooks">
+    </div>
+    <div>
+        <button type="submit" value="submit">submit</button>
+    </div>
+</form>
+</body>
+</html>
