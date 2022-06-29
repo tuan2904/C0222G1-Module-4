@@ -1,8 +1,7 @@
-package com.example.book.model;
+package com.example.books.model;
 
 import javax.persistence.*;
 import java.util.Set;
-
 @Entity
 public class BorrowBooks {
     @Id
@@ -36,14 +35,6 @@ public class BorrowBooks {
     }
 
     public void setBook(Set<Book> book) {
-        this.book = book;
-    }
-
-    public Set<Book> getBooks() {
-        return book;
-    }
-
-    public void setBooks(Set<Book> book) {
         this.book = book;
     }
 }

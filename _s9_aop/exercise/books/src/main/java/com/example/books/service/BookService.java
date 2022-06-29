@@ -1,11 +1,13 @@
-package com.example.book.service;
+package com.example.books.service;
 
-import com.example.book.model.Book;
-import com.example.book.repository.IBookRepository;
+import com.example.books.model.Book;
+import com.example.books.repository.IBookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+
 @Service
 public class BookService implements IBookService{
     @Autowired
@@ -17,17 +19,17 @@ public class BookService implements IBookService{
 
     @Override
     public void returnBook(int number,int id) {
-    bookRepository.returnBook(number,id);
+        bookRepository.update(id,number);
     }
 
     @Override
     public Book findId(int id) {
-        return bookRepository.findAllByIdBook(id);
+        return null;
     }
 
     @Override
     public void save(Book book) {
-        bookRepository.save(book);
+bookRepository.save(book);
     }
 
 }

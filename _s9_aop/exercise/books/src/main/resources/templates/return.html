@@ -5,11 +5,11 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/return" method="post" th:object="${form}">
-    <div th:text="${message}"></div>
+<form action="/return" method="post">
+    <div th:text="${mess}"></div>
     <div>
         <p>Trả sách</p>
-        <p th:feild="*{idBook}"></p>
+        <input type="text" name="idBook">
         <input type="text" name="codeBorrowBooks">
     </div>
     <div>

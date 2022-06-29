@@ -1,7 +1,7 @@
-package com.example.book.service;
+package com.example.books.service;
 
-import com.example.book.model.Book;
-import com.example.book.model.BorrowBooks;
+
+import com.example.books.model.BorrowBooks;
 
 import java.util.List;
 

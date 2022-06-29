@@ -1,6 +1,7 @@
-package com.example.book.service;
+package com.example.books.service;
 
-import com.example.book.model.Book;
+
+import com.example.books.model.Book;
 
 import java.util.List;
 

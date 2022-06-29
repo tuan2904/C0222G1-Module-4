@@ -1,6 +1,6 @@
-package com.example.book.repository;
+package com.example.books.repository;
 
-import com.example.book.model.BorrowBooks;
+import com.example.books.model.BorrowBooks;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -10,7 +10,7 @@ import javax.transaction.Transactional;
 
 @Repository
 @Transactional
-public interface IBorrowBooksRepository extends JpaRepository<BorrowBooks,Integer> {
-    @Query(value="select * from borrow_books where id=:id",nativeQuery = true)
-    BorrowBooks codeBorrowBooks(@Param("id") int id);
+public interface IBorrowBooksRepository extends JpaRepository<BorrowBooks, Integer> {
+    @Query(value = "select * from borrow_books where id=:id",nativeQuery = true)
+    BorrowBooks findById(@Param("id") int id);
 }
