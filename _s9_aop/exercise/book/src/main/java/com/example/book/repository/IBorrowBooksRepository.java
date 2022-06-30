@@ -10,7 +10,7 @@ import javax.transaction.Transactional;
 
 @Repository
 @Transactional
-public interface IBorrowBooksRepository extends JpaRepository<BorrowBooks,Integer> {
-    @Query(value="select * from borrow_books where id=:id",nativeQuery = true)
+public interface IBorrowBooksRepository extends JpaRepository<BorrowBooks, Integer> {
+    @Query(value = "select * from borrow_books where id=:id", nativeQuery = true)
     BorrowBooks codeBorrowBooks(@Param("id") int id);
 }

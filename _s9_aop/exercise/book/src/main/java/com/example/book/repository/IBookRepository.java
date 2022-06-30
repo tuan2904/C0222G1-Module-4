@@ -11,7 +11,7 @@ import javax.transaction.Transactional;
 
 @Repository
 @Transactional
-public interface IBookRepository extends JpaRepository<Book,Integer> {
+public interface IBookRepository extends JpaRepository<Book, Integer> {
     @Query(value = "select * from book where id_book=:id_book", nativeQuery = true)
     Book findAllByIdBook(@Param("id_book") int id);
 
