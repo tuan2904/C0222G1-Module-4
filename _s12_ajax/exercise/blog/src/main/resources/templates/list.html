@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#list").on('keyup', '.search', function (event) {
+                let name = $('.search').value();
+            })
+        })
+
+        $(document).ready(function () {
+            $("#list").on("click", ".search", function (event) {
+                //lay du lieu
+                let a = $(this);
+                // goi ajax
+                $.ajax({
+                    type: "GET",
+                    //tên API
+                    url: `/search`,
+                    //xử lý khi thành công
+                    success: function (data) {
+                        let content = '<table>\n' +
+                            '    <tr>\n' +
+                            '        <td>No:</td>\n' +
+                            '        <td>Id Blog:</td>\n' +
+                            '        <td>Title Blog:</td>\n' +
+                            '        <td>Date Blog:</td>\n' +
+                            '        <td>Name Category:</td>\n' +
+                            '        <td>Delete</td>\n' +
+                            '        <td>Read</td>\n' +
+                            '        <td>Edit</td>\n' +
+                            '    </tr></table>';
+                        for (let i = 0; i < data.length; i++) {
+                            if (a === data[i]) {
+                                content += getSmartphone(data[i]);
+                                break
+                            }
+                        }
+                        document.getElementById('list').innerHTML = content;
+                    }
+                });
+                //chặn sự kiện mặc định của thẻ
+                event.preventDefault();
+            });
+        })
+    </script>
+</head>
+<body>
+<a href="/create">Add new blog</a>
+<table border="1" cellpadding="5" id="list">
+    <tr>
+        <td>No:</td>
+        <td>Id Blog:</td>
+        <td>Title Blog:</td>
+        <td>Date Blog:</td>
+        <td>Name Category:</td>
+        <td>Delete</td>
+        <td>Read</td>
+        <td>Edit</td>
+    </tr>
+    <tr th:each="blog,loop : ${listBlog}">
+        <td th:text="${loop.count}"></td>
+        <td th:text="${blog.idBlog}"></td>
+        <td th:text="${blog.titleBlog}"></td>
+        <td th:text="${blog.dateBlog}"></td>
+        <td th:text="${blog.category.nameCategory}"></td>
+        <td><a th:href="@{/{id}/delete(id=${blog.idBlog})}">Delete</a></td>
+        <td><a th:href="@{/{id}/content(id=${blog.idBlog})}">Read</a></td>
+        <td><a th:href="@{/{id}/edit(id=${blog.idBlog})}">Edit</a></td>
+    </tr>
+</table>
+<div>
+    <span>
+            <a th:if="${listBlog.hasPrevious()}" th:href="@{/list(page = ${listBlog.number - 1})}">Previous</a>
+    </span>
+    <span th:text="${listBlog.number + 1}"></span>/
+    <span th:text="${listBlog.totalPages}"></span>
+    <span>
+        <a th:if="${listBlog.hasNext()}" th:href="@{/list(page = ${listBlog.number +1})}">Next</a>
+    </span>
+</div>
+<form action="/search" method="get">
+    <input type="text" name="titleBlog" class="search">
+    <button type="submit">Search</button>
+</form>
+</body>
+</html>

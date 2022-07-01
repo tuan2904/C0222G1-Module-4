@@ -28,16 +28,16 @@
         <td><a th:href="@{/{id}/edit(id=${blog.idBlog})}">Edit</a></td>
     </tr>
 </table>
-<div>
-    <span>
-            <a th:if = "${listBlog.hasPrevious()}" th:href="@{/list(page = ${listBlog.number - 1})}">Previous</a>
-    </span>
-    <span th:text="${listBlog.number + 1}"></span>/
-    <span th:text="${listBlog.totalPages}"></span>
-    <span>
-        <a th:if = "${listBlog.hasNext()}" th:href="@{/list(page = ${listBlog.number +1})}">Next</a>
-    </span>
-</div>
+<!--<div>-->
+<!--    <span>-->
+<!--            <a th:if = "${listBlog.hasPrevious()}" th:href="@{/list(page = ${listBlog.number - 1})}">Previous</a>-->
+<!--    </span>-->
+<!--    <span th:text="${listBlog.number + 1}"></span>/-->
+<!--    <span th:text="${listBlog.totalPages}"></span>-->
+<!--    <span>-->
+<!--        <a th:if = "${listBlog.hasNext()}" th:href="@{/list(page = ${listBlog.number +1})}">Next</a>-->
+<!--    </span>-->
+<!--</div>-->
 <form action="/search" method="get" >
     <input type="text" name="titleBlog">
     <button type="submit">Search</button>
