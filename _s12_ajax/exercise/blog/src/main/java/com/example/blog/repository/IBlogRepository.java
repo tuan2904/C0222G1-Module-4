@@ -48,4 +48,7 @@ public interface IBlogRepository extends JpaRepository<BlogModel, Integer> {
 
     @Query(value = "select * from blog_table where title_blog like :title_blog", nativeQuery = true)
     Page<BlogModel> searchBlog(@Param("title_blog") String title, Pageable pageable);
+
+    @Query(value = "select * from blog_table where title_blog like :title_blog", nativeQuery = true)
+    Page<BlogModel> searchName(@Param("title_blog") String title, Pageable pageable);
 }

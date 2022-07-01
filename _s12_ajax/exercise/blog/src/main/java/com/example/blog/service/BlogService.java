@@ -17,7 +17,12 @@ public class BlogService implements IBlogService {
 
     @Override
     public Page<BlogModel> search(BlogModel blogModel, Pageable pageable) {
-        return blogRepository.searchBlog(blogModel.getTitleBlog(),pageable);
+        return blogRepository.searchBlog(blogModel.getTitleBlog(), pageable);
+    }
+
+    @Override
+    public Page<BlogModel> searchName(String name, Pageable pageable) {
+        return blogRepository.searchName(name, pageable);
     }
 
     @Override
@@ -42,8 +47,8 @@ public class BlogService implements IBlogService {
 
     @Override
     public void update(BlogModel blogModel) {
-        blogRepository.editBlog( blogModel.getTitleBlog(), blogModel.getContentBlog()
-        ,blogModel.getDateBlog(),blogModel.getIdBlog());
+        blogRepository.editBlog(blogModel.getTitleBlog(), blogModel.getContentBlog()
+                , blogModel.getDateBlog(), blogModel.getIdBlog());
     }
 
     @Override
@@ -52,8 +57,8 @@ public class BlogService implements IBlogService {
     }
 
     @Override
-    public Page<BlogModel> findByIdBlog(int id,Pageable pageable) {
-        return blogRepository.findAllById(id,pageable);
+    public Page<BlogModel> findByIdBlog(int id, Pageable pageable) {
+        return blogRepository.findAllById(id, pageable);
     }
 
 }

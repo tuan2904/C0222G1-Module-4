@@ -7,38 +7,43 @@
     <script type="text/javascript">
 
         $(document).ready(function () {
-            $("#list").on('keyup', '.search', function (event) {
-                let name = $('.search').value();
-            })
-        })
-
-        $(document).ready(function () {
-            $("#list").on("click", ".search", function (event) {
+            $("#search").click(function (event) {
                 //lay du lieu
-                let a = $(this);
+                let titleBlog = document.getElementById("titleBlog").value;
                 // goi ajax
                 $.ajax({
                     type: "GET",
                     //tên API
-                    url: `/search`,
+                    url: `/list/search/${titleBlog}`,
                     //xử lý khi thành công
                     success: function (data) {
-                        let content = '<table>\n' +
-                            '    <tr>\n' +
-                            '        <td>No:</td>\n' +
-                            '        <td>Id Blog:</td>\n' +
-                            '        <td>Title Blog:</td>\n' +
-                            '        <td>Date Blog:</td>\n' +
-                            '        <td>Name Category:</td>\n' +
-                            '        <td>Delete</td>\n' +
-                            '        <td>Read</td>\n' +
-                            '        <td>Edit</td>\n' +
-                            '    </tr></table>';
-                        for (let i = 0; i < data.length; i++) {
-                            if (a === data[i]) {
-                                content += getSmartphone(data[i]);
-                                break
-                            }
+                        // console.log(data);
+                        let content = '';
+                        for (let i = 0; i < data.content.length; i++) {
+                            console.log(data)
+                            content += getSmartphone(data.content[i]);
+                        }
+                        document.getElementById('list').innerHTML = content;
+                    }
+                });
+                event.preventDefault();
+            });
+        })
+
+        var page = 2;
+        $(document).ready(function () {
+            $('#addList').click(function () {
+                page++;
+                $.ajax({
+                    type: "GET",
+                    //tên API
+                    url: `/list/load/${page}`,
+                    //xử lý khi thành công
+                    success: function (data) {
+                        console.log(data);
+                        let content = '';
+                        for (let i = 0; i < data.content.length; i++) {
+                            content += getSmartphone(data.content[i]);
                         }
                         document.getElementById('list').innerHTML = content;
                     }
@@ -47,13 +52,26 @@
                 event.preventDefault();
             });
         })
+
+        function getSmartphone(blog) {
+            return '<tr>' +
+                '<td>' + blog.idBlog + '</td>' +
+                '<td>' + blog.titleBlog + '</td>' +
+                '<td>' + blog.dateBlog + '</td>' +
+                '<td>' + blog.category.nameCategory + '</td>' +
+                '<td><a class="delete" href=/' + blog.idBlog + '/edit >Edit</a></td>' +
+                '<td><a class="content" href=/' + blog.idBlog + '"/content" >Content</a></td>' +
+                '<td><a class="edit" href=' + blog.idBlog + '/delete >Delete</a></td>' +
+                '</tr>';
+        }
+
     </script>
 </head>
 <body>
 <a href="/create">Add new blog</a>
-<table border="1" cellpadding="5" id="list">
+<button type="submit" id="addList">Load More</button>
+<table border="1" cellpadding="5">
     <tr>
-        <td>No:</td>
         <td>Id Blog:</td>
         <td>Title Blog:</td>
         <td>Date Blog:</td>
@@ -62,8 +80,8 @@
         <td>Read</td>
         <td>Edit</td>
     </tr>
+    <tbody id="list">
     <tr th:each="blog,loop : ${listBlog}">
-        <td th:text="${loop.count}"></td>
         <td th:text="${blog.idBlog}"></td>
         <td th:text="${blog.titleBlog}"></td>
         <td th:text="${blog.dateBlog}"></td>
@@ -72,6 +90,7 @@
         <td><a th:href="@{/{id}/content(id=${blog.idBlog})}">Read</a></td>
         <td><a th:href="@{/{id}/edit(id=${blog.idBlog})}">Edit</a></td>
     </tr>
+    </tbody>
 </table>
 <div>
     <span>
@@ -83,9 +102,7 @@
         <a th:if="${listBlog.hasNext()}" th:href="@{/list(page = ${listBlog.number +1})}">Next</a>
     </span>
 </div>
-<form action="/search" method="get">
-    <input type="text" name="titleBlog" class="search">
-    <button type="submit">Search</button>
-</form>
+<input type="text" name="titleBlog" id="titleBlog">
+<button type="submit" id="search">Search</button>
 </body>
 </html>

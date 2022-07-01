@@ -8,12 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,7 +24,7 @@ public class BlogController {
     private ICategoryService categoryService;
 
     @GetMapping("/list")
-        public String listBlog(Model model, @RequestParam(value = "page", defaultValue = "0") int page) {
+    public String listBlog(Model model, @RequestParam(value = "page", defaultValue = "0") int page) {
         Sort sort = Sort.by("date_blog").ascending();
         Page<BlogModel> blogModels = blogService.listBlog(PageRequest.of(page, 2, sort));
         model.addAttribute("listBlog", blogModels);
@@ -76,10 +75,15 @@ public class BlogController {
         return "view";
     }
 
-    @GetMapping("/search")
-    public String searchBlog(@RequestParam(name = "page", defaultValue = "0") int page, Model model, BlogModel blogModel) {
-        model.addAttribute("listBlog", blogService.search(blogModel, PageRequest.of(page, 2)));
-        return "/list";
+    @GetMapping("/list/load/{id}")
+    public ResponseEntity<Iterable<BlogModel>> load(@PathVariable("id") int id, @RequestParam(name = "page", defaultValue = "0") int page) {
+        Page<BlogModel> listLoad = blogService.listBlog(PageRequest.of(page, id));
+        return new ResponseEntity<>(listLoad, HttpStatus.OK);
     }
 
+    @GetMapping("/list/search/{titleBlog}")
+    public ResponseEntity<Iterable<BlogModel>> searchBlog(@RequestParam(name = "page", defaultValue = "0") int page, @PathVariable String titleBlog) {
+        Page<BlogModel> page1 = blogService.searchName(titleBlog, PageRequest.of(page, 2));
+        return new ResponseEntity<>(page1, HttpStatus.OK);
+    }
 }

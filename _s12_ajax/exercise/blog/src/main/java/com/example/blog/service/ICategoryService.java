@@ -9,9 +9,7 @@ import java.util.List;
 
 @Service
 public interface ICategoryService {
-    void create(Category category);
 
     List<Category> listAll();
 
-    List<Category> listAllCategory(String name);
 }
