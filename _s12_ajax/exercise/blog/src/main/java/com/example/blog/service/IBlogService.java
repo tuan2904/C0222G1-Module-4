@@ -8,6 +8,7 @@ import java.util.List;
 
 
 public interface IBlogService {
+    Page<BlogModel> search(BlogModel blogModel, Pageable pageable);
 
     Page<BlogModel> searchName(String name, Pageable pageable);
 

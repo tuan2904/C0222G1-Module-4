@@ -75,15 +75,5 @@ public class BlogController {
         return "view";
     }
 
-    @GetMapping("/list/load/{id}")
-    public ResponseEntity<Iterable<BlogModel>> load(@PathVariable("id") int id, @RequestParam(name = "page", defaultValue = "0") int page) {
-        Page<BlogModel> listLoad = blogService.listBlog(PageRequest.of(page, id));
-        return new ResponseEntity<>(listLoad, HttpStatus.OK);
-    }
 
-    @GetMapping("/list/search/{titleBlog}")
-    public ResponseEntity<Iterable<BlogModel>> searchBlog(@RequestParam(name = "page", defaultValue = "0") int page, @PathVariable String titleBlog) {
-        Page<BlogModel> page1 = blogService.searchName(titleBlog, PageRequest.of(page, 2));
-        return new ResponseEntity<>(page1, HttpStatus.OK);
-    }
 }
