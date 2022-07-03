@@ -1,12 +1,15 @@
 package com.example.furama.service.service;
 
-import com.example.furama.model.Customer;
 import com.example.furama.model.Service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 public interface IServiceService {
     Page<Service> listService(Pageable pageable);
+
+    List<Service> list();
 
     void remove(int id);
 
@@ -15,6 +18,7 @@ public interface IServiceService {
     Service findById(int id);
 
     void create(Service service);
-    Page<Service> search(Service service,Pageable pageable);
+
+    Page<Service> search(Service service, Pageable pageable);
 
 }

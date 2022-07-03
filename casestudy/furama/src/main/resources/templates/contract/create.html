@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+<form action="/contract/create" method="post" th:object="${formCreate}">
+    <div class="form-floating mb-3 mt-3">
+        <input class="form-control" type="text" th:field="*{contractStartDate}" id="name" placeholder="Enter Name">
+        <label class="form-label">Date Start: </label>
+    </div>
+
+    <div class="form-floating mb-3 mt-3">
+        <input class="form-control" type="text" th:field="*{contractEndDate}" id="area" placeholder="Area">
+        <label class="form-label">Date End: </label>
+    </div>
+
+    <div class="form-floating mb-3 mt-3">
+        <select class="form-select" th:field="*{employee.idEmployee}">
+            <option th:each="employee : ${listEmployee}" th:value="${employee.idEmployee}"
+                    th:text="${employee.nameEmployee}">
+            </option>
+        </select> <label class="form-label">ID Employee: </label>
+    </div>
+
+    <div class="form-floating mb-3 mt-3">
+        <select class="form-select" th:field="*{customer.idCustomer}">
+            <option th:each="customer : ${listCustomer}" th:value="${customer.idCustomer}"
+                    th:text="${customer.nameCustomer}">
+            </option>
+        </select>
+        <label class="form-label">Customer: </label>
+    </div>
+
+    <div class="form-floating mb-3 mt-3">
+        <select class="form-select" th:field="*{service.serviceId}">
+            <option th:each="service : ${listService}" th:value="${service.serviceId}"
+                    th:text="${service.serviceName}">
+            </option>
+        </select>
+        <label class="form-label">Service:</label>
+    </div>
+
+    <div class="form-floating mb-3 mt-3">
+        <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+</form>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</html>

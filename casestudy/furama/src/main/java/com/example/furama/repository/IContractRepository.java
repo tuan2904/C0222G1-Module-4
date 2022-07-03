@@ -1,9 +1,9 @@
 package com.example.furama.repository;
 
-import com.example.furama.model.ServiceType;
+import com.example.furama.model.Contract;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IServiceTypeRepository extends JpaRepository<ServiceType, Integer> {
+public interface IContractRepository extends JpaRepository<Contract, Integer> {
 }

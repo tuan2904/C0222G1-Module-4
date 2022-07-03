@@ -16,11 +16,11 @@ public class Customer {
     private String gender;
     @Column(name = "id_car_customer", columnDefinition = "VARCHAR(200)")
     private String idCarCustomer;
-    @Column(name = "phone",columnDefinition = "VARCHAR(200)")
+    @Column(name = "phone", columnDefinition = "VARCHAR(200)")
     private String phone;
-    @Column(name = "email",columnDefinition = "VARCHAR(200)")
+    @Column(name = "email", columnDefinition = "VARCHAR(200)")
     private String email;
-    @Column(name = "address",columnDefinition = "VARCHAR(200)")
+    @Column(name = "address", columnDefinition = "VARCHAR(200)")
     private String address;
     @ManyToOne
     @JoinColumn(name = "id_customer_type")

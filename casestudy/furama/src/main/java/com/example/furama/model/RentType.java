@@ -14,6 +14,7 @@ public class RentType {
     private String rentTypeCost;
     @OneToMany(mappedBy = "rentType")
     private Set<Service> services;
+
     public RentType() {
     }
 

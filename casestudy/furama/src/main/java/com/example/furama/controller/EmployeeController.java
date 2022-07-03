@@ -1,8 +1,6 @@
 package com.example.furama.controller;
 
-import com.example.furama.model.Customer;
 import com.example.furama.model.Employee;
-import com.example.furama.model.Service;
 import com.example.furama.service.division.IDivisionService;
 import com.example.furama.service.educationdegree.IEducationDegreeService;
 import com.example.furama.service.employee.IEmployeeService;
@@ -28,7 +26,7 @@ public class EmployeeController {
     private IEducationDegreeService educationDegreeService;
 
     @GetMapping("employee/list")
-    public String list(@ModelAttribute("listCreate") Employee employee,Model model, @RequestParam(value = "page", defaultValue = "0") int page) {
+    public String list(@ModelAttribute("listCreate") Employee employee, Model model, @RequestParam(value = "page", defaultValue = "0") int page) {
         model.addAttribute("listEmployee", employeeService.listEmployee(PageRequest.of(page, 2)));
         return "employee/list";
     }
@@ -71,8 +69,9 @@ public class EmployeeController {
         employeeService.remove(id);
         return "redirect:/employee/list";
     }
+
     @GetMapping("/employee/search")
-    public String search(@RequestParam(value = "page", defaultValue = "0") int page, Model model,Employee employee ) {
+    public String search(@RequestParam(value = "page", defaultValue = "0") int page, Model model, Employee employee) {
         model.addAttribute("listEmployee", employeeService.search(employee, PageRequest.of(page, 1)));
         return "/employee/list";
     }

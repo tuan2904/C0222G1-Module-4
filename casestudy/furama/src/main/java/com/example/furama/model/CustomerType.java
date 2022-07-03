@@ -8,7 +8,7 @@ public class CustomerType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idCustomerType;
-    @Column(name = "name_customer_type",columnDefinition = "VARCHAR(200)")
+    @Column(name = "name_customer_type", columnDefinition = "VARCHAR(200)")
     private String nameCustomerType;
     @OneToMany(mappedBy = "customerType")
     private Set<Customer> customers;

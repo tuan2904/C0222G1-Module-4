@@ -7,6 +7,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CustomerService implements ICustomerService {
     @Autowired
@@ -18,14 +20,19 @@ public class CustomerService implements ICustomerService {
     }
 
     @Override
+    public List<Customer> list() {
+        return customerRepository.findAll();
+    }
+
+    @Override
     public void remove(int id) {
-    customerRepository.delete(id);
+        customerRepository.delete(id);
     }
 
     @Override
     public void update(Customer customer) {
-    customerRepository.editCustomer(customer.getCustomerType().getIdCustomerType(),customer.getNameCustomer(),customer.getBirthDayCustomer(),customer.getGender()
-            ,customer.getIdCarCustomer(),customer.getPhone(),customer.getEmail(),customer.getEmail(),customer.getIdCustomer());
+        customerRepository.editCustomer(customer.getCustomerType().getIdCustomerType(), customer.getNameCustomer(), customer.getBirthDayCustomer(), customer.getGender()
+                , customer.getIdCarCustomer(), customer.getPhone(), customer.getEmail(), customer.getEmail(), customer.getIdCustomer());
     }
 
     @Override
@@ -35,11 +42,11 @@ public class CustomerService implements ICustomerService {
 
     @Override
     public void create(Customer customer) {
-            customerRepository.save(customer);
+        customerRepository.save(customer);
     }
 
     @Override
     public Page<Customer> search(Customer customer, Pageable pageable) {
-        return customerRepository.search(customer.getNameCustomer(),pageable);
+        return customerRepository.search(customer.getNameCustomer(), pageable);
     }
 }

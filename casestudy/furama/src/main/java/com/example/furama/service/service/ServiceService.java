@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
+
 @org.springframework.stereotype.Service
 public class ServiceService implements IServiceService {
     @Autowired
@@ -17,8 +19,13 @@ public class ServiceService implements IServiceService {
     }
 
     @Override
+    public List<Service> list() {
+        return serviceRepository.findAll();
+    }
+
+    @Override
     public void remove(int id) {
-    serviceRepository.delete(id);
+        serviceRepository.delete(id);
     }
 
     @Override
@@ -40,6 +47,6 @@ public class ServiceService implements IServiceService {
 
     @Override
     public Page<Service> search(Service service, Pageable pageable) {
-        return serviceRepository.search(service.getServiceName(),pageable);
+        return serviceRepository.search(service.getServiceName(), pageable);
     }
 }

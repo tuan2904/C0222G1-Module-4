@@ -20,10 +20,11 @@ public class ServiceController {
     private IRentTypeService rentTypeService;
 
     @GetMapping("service/list")
-    public String list(Model model, @RequestParam( value = "page",defaultValue = "0") int page) {
+    public String list(Model model, @RequestParam(value = "page", defaultValue = "0") int page) {
         model.addAttribute("listService", serviceService.listService(PageRequest.of(page, 2)));
         return "service/list";
     }
+
     @GetMapping("/service/create")
     public String formCreate(Model model) {
         model.addAttribute("listCreate", new Service());
@@ -51,11 +52,13 @@ public class ServiceController {
         serviceService.update(service);
         return "redirect:/service/list";
     }
+
     @GetMapping("/{id}/service/delete")
     public String remove(@PathVariable("id") int id) {
         serviceService.remove(id);
         return "redirect:/service/list";
     }
+
     @GetMapping("service/search")
     public String search(@RequestParam(value = "page", defaultValue = "0") int page, Model model, Service service) {
         model.addAttribute("listService", serviceService.search(service, PageRequest.of(page, 2)));

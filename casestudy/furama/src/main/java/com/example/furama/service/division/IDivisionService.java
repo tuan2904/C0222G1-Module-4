@@ -4,7 +4,7 @@ import com.example.furama.model.Division;
 
 import java.util.List;
 
-public interface IDivisionService  {
+public interface IDivisionService {
     List<Division> listDivision();
 
 }

@@ -10,11 +10,9 @@ public class Contract {
     @Column(columnDefinition = "VARCHAR(200)")
     private String contractStartDate;
     @Column(columnDefinition = "VARCHAR(200)")
-    private String getContractEndDate;
+    private String contractEndDate;
     @Column(columnDefinition = "VARCHAR(200)")
     private String contractDeposit;
-    @Column(columnDefinition = "VARCHAR(200)")
-    private String contractTotalMoney;
 
     @ManyToOne
     @JoinColumn(name = "id_customer")
@@ -31,17 +29,15 @@ public class Contract {
 
     public Contract(int idContract,
                     String contractStartDate,
-                    String getContractEndDate,
+                    String contractEndDate,
                     String contractDeposit,
-                    String contractTotalMoney,
                     Customer customer,
 
                     Employee employee, Service service) {
         this.idContract = idContract;
         this.contractStartDate = contractStartDate;
-        this.getContractEndDate = getContractEndDate;
+        this.contractEndDate = contractEndDate;
         this.contractDeposit = contractDeposit;
-        this.contractTotalMoney = contractTotalMoney;
         this.customer = customer;
         this.employee = employee;
         this.service = service;
@@ -63,12 +59,12 @@ public class Contract {
         this.contractStartDate = contractStartDate;
     }
 
-    public String getGetContractEndDate() {
-        return getContractEndDate;
+    public String getContractEndDate() {
+        return contractEndDate;
     }
 
-    public void setGetContractEndDate(String getContractEndDate) {
-        this.getContractEndDate = getContractEndDate;
+    public void setContractEndDate(String getContractEndDate) {
+        this.contractEndDate = getContractEndDate;
     }
 
     public String getContractDeposit() {
@@ -79,13 +75,6 @@ public class Contract {
         this.contractDeposit = contractDeposit;
     }
 
-    public String getContractTotalMoney() {
-        return contractTotalMoney;
-    }
-
-    public void setContractTotalMoney(String contractTotalMoney) {
-        this.contractTotalMoney = contractTotalMoney;
-    }
 
     public Customer getCustomer() {
         return customer;

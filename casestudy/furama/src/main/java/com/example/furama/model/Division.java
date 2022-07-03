@@ -10,8 +10,8 @@ public class Division {
     private int idDivision;
     @Column(columnDefinition = "VARCHAR(200)")
     private String nameDivision;
-@OneToMany(mappedBy = "division")
-private Set<Employee> employees;
+    @OneToMany(mappedBy = "division")
+    private Set<Employee> employees;
 
     public Set<Employee> getEmployees() {
         return employees;
