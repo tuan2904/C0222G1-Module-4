@@ -1,6 +1,7 @@
 package com.example.furama.controller;
 
 import com.example.furama.model.Customer;
+import com.example.furama.model.CustomerType;
 import com.example.furama.service.ICustomerTypeService;
 import com.example.furama.service.customer.ICustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,18 +17,20 @@ public class CustomerController {
     @Autowired
     private ICustomerTypeService customerTypeService;
 
-    @GetMapping("customer/list")
-    public String listCustomer(Model model, @RequestParam(value = "page", defaultValue = "0") int page) {
+    @GetMapping("/customer/list")
+    public String listCustomer(@ModelAttribute("listCreate") Customer customer, Model model, @RequestParam(value = "page", defaultValue = "0") int page) {
+        model.addAttribute("formEdit", new Customer());
         model.addAttribute("listCustomer", customerService.listCustomer(PageRequest.of(page, 2)));
-        return "customer/list";
+        model.addAttribute("listCustomerType", customerTypeService.listCustomerType());
+        return "/customer/list";
     }
 
     @GetMapping("/customer/create")
-    public String formCreate(Model model) {
+    public String formCreate(Model model, @ModelAttribute("listCustomerType") CustomerType customerType) {
         model.addAttribute("listCreate", new Customer());
-        model.addAttribute("listCustomerType", customerTypeService.listCustomerType());
         return "/customer/create";
     }
+
 
     @PostMapping("/customer/create")
     public String createCustomer(@ModelAttribute("listCreate") Customer customer) {
@@ -49,7 +52,7 @@ public class CustomerController {
     }
 
     @PostMapping("/customer/edit")
-    public String edit(Customer customer) {
+    public String edit(@ModelAttribute("formEdit") Customer customer) {
         customerService.update(customer);
         return "redirect:/customer/list";
     }

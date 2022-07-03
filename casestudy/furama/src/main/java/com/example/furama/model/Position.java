@@ -10,8 +10,8 @@ public class Position {
     private int idPosition;
     @Column(columnDefinition = "VARCHAR(200)")
     private String namePosition;
-@OneToMany(mappedBy = "position")
-private Set<Employee> employees;
+    @OneToMany(mappedBy = "position")
+    private Set<Employee> employees;
 
     public Set<Employee> getEmployees() {
         return employees;

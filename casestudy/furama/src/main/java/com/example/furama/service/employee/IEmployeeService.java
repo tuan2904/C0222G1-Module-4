@@ -1,6 +1,5 @@
 package com.example.furama.service.employee;
 
-import com.example.furama.model.Customer;
 import com.example.furama.model.Employee;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

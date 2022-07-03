@@ -9,10 +9,90 @@
 </head>
 <body>
 <div class="row">
-    <div class="col-md-4"><a href="/customer/create">Add New Customer</a>
-    </div>
-    <div class="col-md-4"></div>
     <div class="col-md-4">
+        <a href="/customer/create" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addModal">
+            Add New Customer
+        </a>
+        <div class="modal" id="addModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h4 class="modal-title">Add New Customer</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <div>
+                            <form action="/customer/create" method="post" th:object="${listCreate}">
+                                <div class="form-floating mb-3 mt-3">
+                                    <select class="form-select" th:field="*{customerType.idCustomerType}">
+                                        <option th:each="customerType : ${listCustomerType}"
+                                                th:value="${customerType.idCustomerType}"
+                                                th:text="${customerType.nameCustomerType}">
+                                        </option>
+                                    </select>
+                                    <label class="form-label">Type Customer</label>
+                                </div>
+                                <div class="form-floating mb-3 mt-3">
+                                    <input class="form-control" type="text" th:field="*{nameCustomer}" id="name"
+                                           placeholder="Enter Name">
+                                    <label class="form-label">Name Customer: </label>
+                                </div>
+                                <div class="form-floating mb-3 mt-3">
+                                    <input class="form-control" type="text" th:field="*{birthDayCustomer}" id="birthDay"
+                                           placeholder="BirthDay">
+                                    <label class="form-label">Birth Day Customer: </label>
+                                </div>
+
+                                <div class="form-floating mb-3 mt-3">
+                                    <input class="form-control" type="text" th:field="*{gender}" id="gender"
+                                           placeholder="Gender">
+                                    <label class="form-label">Gender Customer: </label>
+                                </div>
+
+                                <div class="form-floating mb-3 mt-3">
+                                    <input class="form-control" type="text" th:field="*{idCarCustomer}" id="idCar"
+                                           placeholder="idCar">
+                                    <label class="form-label">Id Car Customer: </label>
+                                </div>
+
+                                <div class="form-floating mb-3 mt-3">
+                                    <input class="form-control" type="text" th:field="*{phone}" id="phone"
+                                           placeholder="phone">
+                                    <label class="form-label">Phone Number Customer: </label>
+                                </div>
+
+                                <div class="form-floating mb-3 mt-3">
+                                    <input type="text" th:field="*{email}" class="form-control" id="email"
+                                           placeholder="Email">
+                                    <label class="form-label">Email Customer: </label>
+                                </div>
+                                <div class="form-floating mb-3 mt-3">
+                                    <input type="text" th:field="*{address}" class="form-control" id="address"
+                                           placeholder="address">
+                                    <label class="form-label">Address Customer: </label>
+                                </div>
+                                <div class="form-floating mb-3 mt-3">
+                                    <button type="submit" class="btn btn-primary">Create</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="col-md-4"></div>
+<div class="col-md-4">
+    <div>
         <form action="/customer/search" method="get">
             <div class="input-group">
                 <input type="text" class="form-control form-control-lg" placeholder="Search Here" name="nameCustomer">
@@ -20,6 +100,8 @@
             </div>
         </form>
     </div>
+
+</div>
 </div>
 <table class="table table-hover">
     <tr>
@@ -33,8 +115,8 @@
         <th>Email</th>
         <th>Address</th>
         <th>ID Type Customer</th>
-        <th>delete</th>
         <th>Edit</th>
+        <th>Delete</th>
     </tr>
     <tr th:each="customer,loop : ${listCustomer}">
         <td th:text="${loop.count}"></td>
@@ -47,7 +129,94 @@
         <td th:text="${customer.email}"></td>
         <td th:text="${customer.address}"></td>
         <td th:text="${customer.customerType.idCustomerType}"></td>
-        <td><a th:href="@{/{id}/customer/edit(id=${customer.idCustomer})}">Edit</a></td>
+        <td>
+            <div>
+                <a class="btn btn-danger"
+                   th:href="@{/{id}/customer/edit(id=${customer.idCustomer})}" data-bs-toggle="modal"
+                   data-bs-target="#editModal">Edit
+                </a>
+            </div>
+
+            <div class="modal" id="editModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <p class="modal-title">Edit Customer</p>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <form action="/customer/edit" method="post" th:object="${formEdit}">
+                                <div class="form-floating mb-3 mt-3">
+                                    <input class="form-control" type="text" th:field="*{idCustomer}" id="id"
+                                           placeholder="Enter Id">
+                                    <label class="form-label">Id Customer: </label>
+                                </div>
+
+                                <div class="form-floating mb-3 mt-3">
+                                    <select class="form-select" th:field="*{customerType.idCustomerType}">
+                                        <option th:each="customerType : ${listCustomerType}"
+                                                th:value="${customerType.idCustomerType}"
+                                                th:text="${customerType.nameCustomerType}">
+                                        </option>
+                                    </select>
+                                    <label class="form-label">Type Customer</label>
+                                </div>
+
+                                <div class="form-floating mb-3 mt-3">
+                                    <input class="form-control" type="text" th:field="*{nameCustomer}" id="names"
+                                           placeholder="Enter Name">
+                                    <label class="form-label">Name Customer: </label>
+                                </div>
+
+                                <div class="form-floating mb-3 mt-3">
+                                    <input class="form-control" type="text" th:field="*{birthDayCustomer}"
+                                           id="birthDays" placeholder="BirthDay">
+                                    <label class="form-label">Birth Day Customer: </label>
+                                </div>
+
+                                <div class="form-floating mb-3 mt-3">
+                                    <input class="form-control" type="text" th:field="*{gender}" id="genders"
+                                           placeholder="Gender">
+                                    <label class="form-label">Gender Customer: </label>
+                                </div>
+
+                                <div class="form-floating mb-3 mt-3">
+                                    <input class="form-control" type="text" th:field="*{idCarCustomer}" id="idCars"
+                                           placeholder="idCar">
+                                    <label class="form-label">Id Car Customer: </label>
+                                </div>
+
+                                <div class="form-floating mb-3 mt-3">
+                                    <input class="form-control" type="text" th:field="*{phone}" id="phones"
+                                           placeholder="phone">
+                                    <label class="form-label">Phone Number Customer: </label>
+                                </div>
+
+                                <div class="form-floating mb-3 mt-3">
+                                    <input type="text" th:field="*{email}" class="form-control" id="emails"
+                                           placeholder="Email">
+                                    <label class="form-label">Email Customer: </label>
+                                </div>
+
+                                <div class="form-floating mb-3 mt-3">
+                                    <input type="text" th:field="*{address}" class="form-control" id="addresss"
+                                           placeholder="address">
+                                    <label class="form-label">Address Customer: </label>
+                                </div>
+
+                                <div class="form-floating mb-3 mt-3">
+                                    <button type="submit" class="btn btn-primary">Update</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
         <td>
             <div>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
@@ -69,9 +238,9 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-                            <button th:href="@{/{id}/customer/delete(id=${customer.idCustomer})}" type="submit"
-                                    class="btn btn-danger" data-bs-dismiss="modal">Delete
-                            </button>
+                            <a class="btn btn-danger"
+                               th:href="@{/{id}/customer/delete(id=${customer.idCustomer})}">Delete
+                            </a>
                         </div>
 
                     </div>
@@ -90,9 +259,12 @@
         <a th:if="${listCustomer.hasNext()}" th:href="@{/customer/list(page = ${listCustomer.number +1})}">Next</a>
     </span>
 </div>
+
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 </html>
 </html>
+
+

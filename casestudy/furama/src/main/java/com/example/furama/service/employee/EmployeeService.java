@@ -23,6 +23,7 @@ public class EmployeeService implements IEmployeeService {
     private IDivisionService divisionService;
     @Autowired
     private IEducationDegreeService educationDegreeService;
+
     @Override
     public Page<Employee> listEmployee(Pageable pageable) {
         return employeeRepository.findAll(pageable);
@@ -30,26 +31,28 @@ public class EmployeeService implements IEmployeeService {
 
     @Override
     public void remove(int id) {
-
+    employeeRepository.delete(id);
     }
 
     @Override
     public void update(Employee employee) {
-employeeRepository.save(employee);
+        employeeRepository.update(employee.getAddress(), employee.getBirthDayEmployee(), employee.getEmail(), employee.getIdCarEmployee(), employee.getNameEmployee()
+                , employee.getPhone(), employee.getSalary(), employee.getDivision().getIdDivision(), employee.getEducationDegree().getIdEducationDegree()
+                , employee.getPosition().getIdPosition(), employee.getUser().getUsername(), employee.getIdEmployee());
     }
 
     @Override
     public Employee findById(int id) {
-        return null;
+        return employeeRepository.findId(id);
     }
 
     @Override
     public void create(Employee employee) {
-employeeRepository.save(employee);
+        employeeRepository.save(employee);
     }
 
     @Override
     public Page<Employee> search(Employee employee, Pageable pageable) {
-        return null;
+        return employeeRepository.search(employee.getNameEmployee(),pageable);
     }
 }

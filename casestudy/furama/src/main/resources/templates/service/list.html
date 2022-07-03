@@ -8,19 +8,21 @@
     <title>Title</title>
 </head>
 <body>
-<div class="row" >
+<div class="row">
     <div class="col-md-4"><a href="/service/create">Add New Service</a>
     </div>
     <div class="col-md-4"></div>
     <div class="col-md-4">
-            <form action="/service/search" method="get">
+        <form action="/service/search" method="get">
+            <div class="input-group">
                 <div class="input-group">
-                    <div class="input-group">
-                        <input type="text" class="form-control form-control-lg" placeholder="Search Here" name="serviceName">
-                        <button type="submit" class="input-group-text btn-success"><i class="fas fa-search"></i> Search</button>
-                    </div>
+                    <input type="text" class="form-control form-control-lg" placeholder="Search Here"
+                           name="serviceName">
+                    <button type="submit" class="input-group-text btn-success"><i class="fas fa-search"></i> Search
+                    </button>
                 </div>
-            </form>
+            </div>
+        </form>
     </div>
 </div>
 <table class="table table-hover">
@@ -37,8 +39,8 @@
         <th>Description Service</th>
         <th>Pool Area Service</th>
         <th>Number Floors Service</th>
-        <th>delete</th>
         <th>Edit</th>
+        <th>Delete</th>
     </tr>
     <tr th:each="service,loop : ${listService}">
         <td th:text="${loop.count}"></td>
@@ -53,8 +55,13 @@
         <td th:text="${service.serviceDescription}"></td>
         <td th:text="${service.servicePoolArea}"></td>
         <td th:text="${service.serviceNumberFloors}"></td>
-        <td><a th:href="@{/{id}/service/edit(id=${service.serviceId})}">Edit</a></td>
+        <td><a class="btn btn-primary" th:href="@{/{id}/service/edit(id=${service.serviceId})}">Edit</a></td>
         <td>
+            <div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+                    Delete
+                </button>
+            </div>
             <div class="modal" tabindex="-1">
                 <div class="modal-dialog">
                     <div class="modal-content">

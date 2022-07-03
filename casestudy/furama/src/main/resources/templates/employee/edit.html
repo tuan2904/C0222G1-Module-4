@@ -7,36 +7,28 @@
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-<form action="/customer/edit" method="post" th:object="${formEdit}">
+<form action="/employee/edit" method="post" th:object="${formEditEmployee}">
     </div>
     <div class="form-floating mb-3 mt-3">
-        <input class="form-control" type="text" th:field="*{idCustomer}" id="id" placeholder="Enter Id">
-        <label class="form-label">Id Customer: </label>
+        <input class="form-control" type="text" th:field="*{idEmployee}" id="id" placeholder="Enter Id">
+        <label class="form-label">Id Employee: </label>
     </div>
     <div class="form-floating mb-3 mt-3">
-        <select class="form-select" th:field="*{customerType.idCustomerType}">
-            <option th:each="customerType : ${listCustomerType}" th:value="${customerType.idCustomerType}"
-                    th:text="${customerType.nameCustomerType}">
-            </option>
-        </select>
-        <label class="form-label">Type Customer</label>
-    </div>
-    <div class="form-floating mb-3 mt-3">
-        <input class="form-control" type="text" th:field="*{nameCustomer}" id="name" placeholder="Enter Name">
+        <input class="form-control" type="text" th:field="*{nameEmployee}" id="name" placeholder="Enter Name">
         <label class="form-label">Name Customer: </label>
     </div>
     <div class="form-floating mb-3 mt-3">
-        <input class="form-control" type="text" th:field="*{birthDayCustomer}" id="birthDay" placeholder="BirthDay">
+        <input class="form-control" type="text" th:field="*{birthDayEmployee}" id="birthDay" placeholder="BirthDay">
         <label class="form-label">Birth Day Customer: </label>
     </div>
 
     <div class="form-floating mb-3 mt-3">
-        <input class="form-control" type="text" th:field="*{gender}" id="gender" placeholder="Gender">
+        <input class="form-control" type="text" th:field="*{idCarEmployee}" id="gender" placeholder="Gender">
         <label class="form-label">Gender Customer: </label>
     </div>
 
     <div class="form-floating mb-3 mt-3">
-        <input class="form-control" type="text" th:field="*{idCarCustomer}" id="idCar" placeholder="idCar">
+        <input class="form-control" type="text" th:field="*{salary}" id="idCar" placeholder="idCar">
         <label class="form-label">Id Car Customer: </label>
     </div>
 
@@ -54,7 +46,39 @@
         <label class="form-label">Address Customer: </label>
     </div>
     <div class="form-floating mb-3 mt-3">
-        <button type="submit" class="btn btn-primary">Create</button>
+        <select class="form-select" th:field="*{position.idPosition}">
+            <option th:each="position : ${listPosition}" th:value="${position.idPosition}"
+                    th:text="${position.namePosition}">
+            </option>
+        </select>
+        <label class="form-label">Position Employee</label>
+    </div>
+    <div class="form-floating mb-3 mt-3">
+        <select class="form-select" th:field="*{educationDegree.idEducationDegree}">
+            <option th:each="education : ${listEducation}" th:value="${education.idEducationDegree}"
+                    th:text="${education.nameEducationDegree}">
+            </option>
+        </select>
+        <label class="form-label">Education Degree Employee</label>
+    </div>
+    <div class="form-floating mb-3 mt-3">
+        <select class="form-select" th:field="*{division.idDivision}">
+            <option th:each="division : ${listDivision}" th:value="${division.idDivision}"
+                    th:text="${division.nameDivision}">
+            </option>
+        </select>
+        <label class="form-label">Division Employee</label>
+    </div>
+    <div class="form-floating mb-3 mt-3">
+        <select class="form-select" th:field="*{user.username}">
+            <option th:each="user : ${listUser}" th:value="${user.username}"
+                    th:text="${user.username}">
+            </option>
+        </select>
+        <label class="form-label">User</label>
+    </div>
+    <div class="form-floating mb-3 mt-3">
+        <button type="submit" class="btn btn-primary">Update</button>
     </div>
 </form>
 </body>

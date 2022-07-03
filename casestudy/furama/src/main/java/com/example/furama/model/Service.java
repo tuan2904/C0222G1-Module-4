@@ -2,6 +2,7 @@ package com.example.furama.model;
 
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity(name = "service")
 public class Service {
@@ -16,10 +17,6 @@ public class Service {
     private String serviceCost;
     @Column(columnDefinition = "VARCHAR(200)")
     private String serviceMaxPeople;
-//    @Column(columnDefinition = "VARCHAR(200)")
-//    private String rentTypeId;
-//    @Column(columnDefinition = "VARCHAR(200)")
-//    private String serviceTypeId;
     @Column(columnDefinition = "VARCHAR(200)")
     private String serviceRoom;
     @Column(columnDefinition = "VARCHAR(200)")
@@ -34,6 +31,16 @@ public class Service {
     @ManyToOne
     @JoinColumn(name = "id_rant_type")
     private RentType rentType;
+    @OneToMany(mappedBy = "service")
+    private Set<Contract> contracts;
+
+    public Set<Contract> getContracts() {
+        return contracts;
+    }
+
+    public void setContracts(Set<Contract> contracts) {
+        this.contracts = contracts;
+    }
 
     public RentType getRentType() {
         return rentType;

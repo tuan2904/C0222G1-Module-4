@@ -9,13 +9,15 @@
 </head>
 <body>
 <div class="row">
-    <div class="col-md-4"><a href="/employee/create">Add New Employee</a>
-    </div>
+
+    <a href="/employee/create" class="btn btn-primary">
+        Add New Customer
+    </a>
     <div class="col-md-4"></div>
     <div class="col-md-4">
         <form action="/employee/search" method="get">
             <div class="input-group">
-                <input type="text" class="form-control form-control-lg" placeholder="Search Here" name="nameCustomer">
+                <input type="text" class="form-control form-control-lg" placeholder="Search Here" name="nameEmployee">
                 <button type="submit" class="input-group-text btn-success"><i class="fas fa-search"></i> Search</button>
             </div>
         </form>
@@ -37,38 +39,44 @@
         <th>Division</th>
         <th>User</th>
         <th>Edit</th>
+        <th>Delete</th>
     </tr>
-    <tr th:each="employss,loop : ${listEmployee}">
+    <tr th:each="employee,loop : ${listEmployee}">
         <td th:text="${loop.count}"></td>
-        <td th:text="${employss.idEmployee}"></td>
-        <td th:text="${employss.nameEmployee}"></td>
-        <td th:text="${employss.birthDayEmployee}"></td>
-        <td th:text="${employss.idCarEmployee}"></td>
-        <td th:text="${employss.salary}"></td>
-        <td th:text="${employss.phone}"></td>
-        <td th:text="${employss.email}"></td>
-        <td th:text="${employss.address}"></td>
-        <td th:text="${employss.position.idPosition}"></td>
-        <td th:text="${employss.educationDegree.idEducationDegree}"></td>
-        <td th:text="${employss.division.idDivision}"></td>
-        <td th:text="${employss.user.username}"></td>
-        <td><a th:href="@{/{id}/employee/edit(id=${employss.idEmployee})}">Edit</a></td>
+        <td th:text="${employee.idEmployee}"></td>
+        <td th:text="${employee.nameEmployee}"></td>
+        <td th:text="${employee.birthDayEmployee}"></td>
+        <td th:text="${employee.idCarEmployee}"></td>
+        <td th:text="${employee.salary}"></td>
+        <td th:text="${employee.phone}"></td>
+        <td th:text="${employee.email}"></td>
+        <td th:text="${employee.address}"></td>
+        <td th:text="${employee.position.idPosition}"></td>
+        <td th:text="${employee.educationDegree.idEducationDegree}"></td>
+        <td th:text="${employee.division.idDivision}"></td>
+        <td th:text="${employee.user.username}"></td>
+        <td><a class="btn btn-primary" th:href="@{/{id}/employee/edit(id=${employee.idEmployee})}">Edit</a></td>
         <td>
-            <div class="modal" tabindex="-1">
+            <div>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#removeEmployee">
+                    Delete
+                </button>
+            </div>
+            <div class="modal" tabindex="-1" id="removeEmployee">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title">Modal title</h5>
+                            <h5 class="modal-title">Delete Employee</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <p th:text="${employss.nameEmployee}"></p>
+                            <p th:text="${employee.nameEmployee}"></p>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary"
-                                    th:href="@{/{id}/employee/delete(id=${employss.idEmployee})}">Delete
-                            </button>
+                            <a class="btn btn-primary"
+                               th:href="@{/{id}/employee/delete(id=${employee.idEmployee})}">Delete
+                            </a>
                         </div>
                     </div>
                 </div>

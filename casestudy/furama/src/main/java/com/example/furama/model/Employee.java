@@ -1,6 +1,7 @@
 package com.example.furama.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity(name = "employee")
 public class Employee {
@@ -30,9 +31,19 @@ public class Employee {
     @ManyToOne
     @JoinColumn(name = "id_education_degree")
     private EducationDegree educationDegree;
-@ManyToOne
-@JoinColumn(name = "id_division")
-private Division division;
+    @ManyToOne
+    @JoinColumn(name = "id_division")
+    private Division division;
+    @OneToMany(mappedBy = "employee")
+    private Set<Contract> contracts;
+
+    public Set<Contract> getContracts() {
+        return contracts;
+    }
+
+    public void setContracts(Set<Contract> contracts) {
+        this.contracts = contracts;
+    }
 
     public Division getDivision() {
         return division;

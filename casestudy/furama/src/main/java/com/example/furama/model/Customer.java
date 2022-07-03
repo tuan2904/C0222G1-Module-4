@@ -1,6 +1,7 @@
 package com.example.furama.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity(name = "customer")
 public class Customer {
@@ -24,6 +25,16 @@ public class Customer {
     @ManyToOne
     @JoinColumn(name = "id_customer_type")
     private CustomerType customerType;
+    @OneToMany(mappedBy = "customer")
+    private Set<Contract> contracts;
+
+    public Set<Contract> getContracts() {
+        return contracts;
+    }
+
+    public void setContracts(Set<Contract> contracts) {
+        this.contracts = contracts;
+    }
 
     public CustomerType getCustomerType() {
         return customerType;
