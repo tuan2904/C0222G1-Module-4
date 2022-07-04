@@ -17,16 +17,22 @@ public class CustomerController {
     @Autowired
     private ICustomerTypeService customerTypeService;
 
+    @ModelAttribute("listCustomerType")
+    public String listCustomerType() {
+        customerTypeService.listCustomerType();
+        return "";
+    }
+
     @GetMapping("/customer/list")
     public String listCustomer(@ModelAttribute("listCreate") Customer customer, Model model, @RequestParam(value = "page", defaultValue = "0") int page) {
-        model.addAttribute("formEdit", new Customer());
+       model.addAttribute("formEdit",new Customer());
         model.addAttribute("listCustomer", customerService.listCustomer(PageRequest.of(page, 2)));
         model.addAttribute("listCustomerType", customerTypeService.listCustomerType());
         return "/customer/list";
     }
 
     @GetMapping("/customer/create")
-    public String formCreate(Model model, @ModelAttribute("listCustomerType") CustomerType customerType) {
+    public String formCreate(Model model) {
         model.addAttribute("listCreate", new Customer());
         return "/customer/create";
     }

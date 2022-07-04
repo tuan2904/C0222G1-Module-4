@@ -17,6 +17,8 @@ public class Contract {
     @ManyToOne
     @JoinColumn(name = "id_customer")
     private Customer customer;
+    //contractStartDate : '2022-'
+    //customer : {id: '1'}
     @ManyToOne
     @JoinColumn(name = "id_employee")
     private Employee employee;

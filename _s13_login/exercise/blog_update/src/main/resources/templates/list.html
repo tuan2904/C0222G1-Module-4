@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#search").click(function (event) {
+                //lay du lieu
+                let titleBlog = document.getElementById("titleBlog").value;
+                // goi ajax
+                $.ajax({
+                    type: "GET",
+                    //tên API
+                    url: `/list/search/${titleBlog}`,
+                    //xử lý khi thành công
+                    success: function (data) {
+                        // console.log(data);
+                        let content = '';
+                        for (let i = 0; i < data.content.length; i++) {
+                            console.log(data)
+                            content += getSmartphone(data.content[i]);
+                        }
+                        document.getElementById('list').innerHTML = content;
+                    }
+                });
+                event.preventDefault();
+            });
+        })
+
+        var page = 2;
+        $(document).ready(function () {
+            $('#addList').click(function () {
+                page++;
+                $.ajax({
+                    type: "GET",
+                    //tên API
+                    url: `/list/load/${page}`,
+                    //xử lý khi thành công
+                    success: function (data) {
+                        console.log(data);
+                        let content = '';
+                        for (let i = 0; i < data.content.length; i++) {
+                            content += getSmartphone(data.content[i]);
+                        }
+                        document.getElementById('list').innerHTML = content;
+                    }
+                });
+                //chặn sự kiện mặc định của thẻ
+                event.preventDefault();
+            });
+        })
+
+        function getSmartphone(blog) {
+            return '<tr>' +
+                '<td>' + blog.idBlog + '</td>' +
+                '<td>' + blog.titleBlog + '</td>' +
+                '<td>' + blog.dateBlog + '</td>' +
+                '<td>' + blog.category.nameCategory + '</td>' +
+                '<td><a class="delete" href=/' + blog.idBlog + '/edit >Edit</a></td>' +
+                '<td><a class="content" href=/' + blog.idBlog + '"/content" >Content</a></td>' +
+                '<td><a class="edit" href=' + blog.idBlog + '/delete >Delete</a></td>' +
+                '</tr>';
+        }
+
+    </script>
+</head>
+<body>
+<a th:if="${#request.userPrincipal != null}" th:href="@{/create}">Add Blog</a>
+<button type="submit" id="addList">Load More</button>
+<table border="1" cellpadding="5">
+    <tr>
+        <td>Id Blog:</td>
+        <td>Title Blog:</td>
+        <td>Date Blog:</td>
+        <td>Name Category:</td>
+        <td>Delete</td>
+        <td>Read</td>
+        <td>Edit</td>
+    </tr>
+    <tbody id="list">
+    <tr th:each="blog,loop : ${listBlog}">
+        <td th:text="${blog.idBlog}"></td>
+        <td th:text="${blog.titleBlog}"></td>
+        <td th:text="${blog.dateBlog}"></td>
+        <td th:text="${blog.category.nameCategory}"></td>
+        <td><a th:href="@{/{id}/delete(id=${blog.idBlog})}">Delete</a></td>
+        <td><a th:href="@{/{id}/content(id=${blog.idBlog})}">Read</a></td>
+        <td><a th:href="@{/{id}/edit(id=${blog.idBlog})}">Edit</a></td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <span>
+            <a th:if="${listBlog.hasPrevious()}" th:href="@{/list(page = ${listBlog.number - 1})}">Previous</a>
+    </span>
+    <span th:text="${listBlog.number + 1}"></span>/
+    <span th:text="${listBlog.totalPages}"></span>
+    <span>
+        <a th:if="${listBlog.hasNext()}" th:href="@{/list(page = ${listBlog.number +1})}">Next</a>
+    </span>
+</div>
+<input type="text" name="titleBlog" id="titleBlog">
+<button type="submit" id="search">Search</button>
+</body>
+</html>
